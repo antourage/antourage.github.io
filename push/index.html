@@ -8,19 +8,19 @@
       
       
       
-      <link rel="shortcut icon" href="img/favicon.ico">
+      <link rel="shortcut icon" href="../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.2">
     
     
       
-        <title>Antourage</title>
+        <title>Push notfications - Antourage</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.38780c08.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.38780c08.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.3f72e892.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f72e892.min.css">
         
       
     
@@ -35,7 +35,7 @@
     
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
     
       
@@ -58,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#push-notifications-firebase-approach-todo-delete-me" class="md-skip">
+        <a href="#push-notifications" class="md-skip">
           Skip to content
         </a>
       
@@ -69,9 +69,9 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="." title="Antourage" class="md-header-nav__button md-logo" aria-label="Antourage">
+    <a href=".." title="Antourage" class="md-header-nav__button md-logo" aria-label="Antourage">
       
-  <img src="img/favicon.ico" alt="logo">
+  <img src="../img/favicon.ico" alt="logo">
 
     </a>
     <label class="md-header-nav__button md-icon" for="__drawer">
@@ -140,9 +140,9 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Antourage" class="md-nav__button md-logo" aria-label="Antourage">
+    <a href=".." title="Antourage" class="md-nav__button md-logo" aria-label="Antourage">
       
-  <img src="img/favicon.ico" alt="logo">
+  <img src="../img/favicon.ico" alt="logo">
 
     </a>
     Antourage
@@ -156,7 +156,7 @@
 
 
   <li class="md-nav__item">
-    <a href="overview/" class="md-nav__link">
+    <a href="../overview/" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -168,7 +168,7 @@
 
 
   <li class="md-nav__item">
-    <a href="widget/" class="md-nav__link">
+    <a href="../widget/" class="md-nav__link">
       Widget
     </a>
   </li>
@@ -188,7 +188,7 @@
       
     
     
-    <a href="." class="md-nav__link md-nav__link--active">
+    <a href="./" class="md-nav__link md-nav__link--active">
       Push notfications
     </a>
     
@@ -223,20 +223,7 @@
               
                 
                 
-                <h1 id="push-notifications-firebase-approach-todo-delete-me">Push notifications (Firebase approach) TODO: delete me</h1>
-<p>To support PN on your side you should retrieve token for our senderID, send all needed data to us and subscribe yourself to our topic. You can put this code to MessagingDelegate method <code>messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String)</code>   </p>
-<div class="highlight"><pre><span></span><code>  <span class="c1">//</span><span class="cs">MARK:</span><span class="c1"> Connect PN to Antourage Firebase app</span>
-  <span class="n">Messaging</span><span class="p">.</span><span class="n">messaging</span><span class="p">().</span><span class="n">retrieveFCMToken</span><span class="p">(</span><span class="n">forSenderID</span><span class="p">:</span> <span class="n">AntWidget</span><span class="p">.</span><span class="n">AntSenderId</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
-    <span class="n">AntWidget</span><span class="p">.</span><span class="n">registerNotifications</span><span class="p">(</span><span class="n">FCMToken</span><span class="p">:</span> <span class="n">token</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="k">in</span>
-      <span class="k">switch</span> <span class="n">result</span> <span class="p">{</span>
-       <span class="k">case</span> <span class="p">.</span><span class="n">success</span><span class="p">(</span><span class="kd">let</span> <span class="nv">topic</span><span class="p">):</span>
-         <span class="n">Messaging</span><span class="p">.</span><span class="n">messaging</span><span class="p">().</span><span class="n">subscribe</span><span class="p">(</span><span class="n">toTopic</span><span class="p">:</span> <span class="n">topic</span><span class="p">)</span>
-       <span class="k">case</span> <span class="p">.</span><span class="n">failure</span><span class="p">(</span><span class="kd">let</span> <span class="nv">notificationError</span><span class="p">):</span>
-         <span class="bp">print</span><span class="p">(</span><span class="n">notificationError</span><span class="p">.</span><span class="n">localizedDescription</span><span class="p">)</span>
-       <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-</code></pre></div>
+                <h1 id="push-notifications">Push notifications</h1>
                 
               
               
@@ -255,7 +242,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="widget/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../widget/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -289,15 +276,15 @@
       
     </div>
     
-      <script src="assets/javascripts/vendor.77e55a48.min.js"></script>
-      <script src="assets/javascripts/bundle.9554a270.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../assets/javascripts/vendor.77e55a48.min.js"></script>
+      <script src="../assets/javascripts/bundle.9554a270.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
-          base: ".",
+          base: "..",
           features: ['header.autohide'],
           search: Object.assign({
-            worker: "assets/javascripts/worker/search.4ac00218.min.js"
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

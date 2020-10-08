@@ -235,8 +235,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#push-notifications-firebase-approach-todo-delete-me" class="md-nav__link">
-    Push notifications (Firebase approach) TODO: delete me
+  <a href="#handling-push-notifications" class="md-nav__link">
+    Handling push notifications
   </a>
   
 </li>
@@ -280,7 +280,7 @@
 
 
   <li class="md-nav__item">
-    <a href=".." class="md-nav__link">
+    <a href="../push/" class="md-nav__link">
       Push notfications
     </a>
   </li>
@@ -346,8 +346,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#push-notifications-firebase-approach-todo-delete-me" class="md-nav__link">
-    Push notifications (Firebase approach) TODO: delete me
+  <a href="#handling-push-notifications" class="md-nav__link">
+    Handling push notifications
   </a>
   
 </li>
@@ -456,20 +456,7 @@ and
 </code></pre></div>
 </div>
 </div>
-<h3 id="push-notifications-firebase-approach-todo-delete-me">Push notifications (Firebase approach) TODO: delete me</h3>
-<p>To support PN on your side you should retrieve token for our senderID, send all needed data to us and subscribe yourself to our topic. You can put this code to MessagingDelegate method <code>messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String)</code>   </p>
-<div class="highlight"><pre><span></span><code>  <span class="c1">//</span><span class="cs">MARK:</span><span class="c1"> Connect PN to Antourage Firebase app</span>
-  <span class="n">Messaging</span><span class="p">.</span><span class="n">messaging</span><span class="p">().</span><span class="n">retrieveFCMToken</span><span class="p">(</span><span class="n">forSenderID</span><span class="p">:</span> <span class="n">AntWidget</span><span class="p">.</span><span class="n">AntSenderId</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
-    <span class="n">AntWidget</span><span class="p">.</span><span class="n">registerNotifications</span><span class="p">(</span><span class="n">FCMToken</span><span class="p">:</span> <span class="n">token</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="k">in</span>
-      <span class="k">switch</span> <span class="n">result</span> <span class="p">{</span>
-       <span class="k">case</span> <span class="p">.</span><span class="n">success</span><span class="p">(</span><span class="kd">let</span> <span class="nv">topic</span><span class="p">):</span>
-         <span class="n">Messaging</span><span class="p">.</span><span class="n">messaging</span><span class="p">().</span><span class="n">subscribe</span><span class="p">(</span><span class="n">toTopic</span><span class="p">:</span> <span class="n">topic</span><span class="p">)</span>
-       <span class="k">case</span> <span class="p">.</span><span class="n">failure</span><span class="p">(</span><span class="kd">let</span> <span class="nv">notificationError</span><span class="p">):</span>
-         <span class="bp">print</span><span class="p">(</span><span class="n">notificationError</span><span class="p">.</span><span class="n">localizedDescription</span><span class="p">)</span>
-       <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-</code></pre></div>
+<h3 id="handling-push-notifications">Handling push notifications</h3>
 <p>To open directly Feed screen from PN interaction handler just get Feed controller and present it modally.
 <div class="highlight"><pre><span></span><code>  <span class="kd">func</span> <span class="nf">userNotificationCenter</span><span class="p">(</span><span class="kc">_</span> <span class="n">center</span><span class="p">:</span> <span class="n">UNUserNotificationCenter</span><span class="p">,</span> <span class="n">didReceive</span> <span class="n">response</span><span class="p">:</span> <span class="n">UNNotificationResponse</span><span class="p">,</span> <span class="n">withCompletionHandler</span> <span class="n">completionHandler</span><span class="p">:</span> <span class="p">@</span><span class="n">escaping</span> <span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">Void</span><span class="p">)</span> <span class="p">{</span>
     <span class="kd">let</span> <span class="nv">userInfo</span> <span class="p">=</span> <span class="n">response</span><span class="p">.</span><span class="n">notification</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">content</span><span class="p">.</span><span class="n">userInfo</span>
@@ -574,7 +561,7 @@ Nazar Mykhailevych, nm@leobit.com</p>
           </a>
         
         
-          <a href=".." class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../push/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
