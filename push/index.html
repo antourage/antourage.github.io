@@ -188,9 +188,45 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Push notfications
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
     <a href="./" class="md-nav__link md-nav__link--active">
       Push notfications
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#subscription" class="md-nav__link">
+    Subscription
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sending-push-notifications" class="md-nav__link">
+    Sending Push Notifications
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -212,6 +248,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#subscription" class="md-nav__link">
+    Subscription
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sending-push-notifications" class="md-nav__link">
+    Sending Push Notifications
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -224,6 +282,19 @@
                 
                 
                 <h1 id="push-notifications">Push notifications</h1>
+<h2 id="subscription">Subscription</h2>
+<p>Subscription and unsubscription are handled by our partners, not by Antourage dev team.
+If partners have PN in their system they should provide us with POST endpoint that will receive next JSON payload:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;some title&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;body&quot;</span><span class="o">:</span> <span class="s2">&quot;some body&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;source&quot;</span><span class="o">:</span> <span class="s2">&quot;antourage&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;additional_payload_required_by_partners&quot;</span><span class="o">:</span> <span class="s2">&quot;partner_payload&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="sending-push-notifications">Sending Push Notifications</h2>
+<p>Antourage backend will sends POST request only if a new live stream is started.
+Sending PN is an internal implementation of our partners.</p>
                 
               
               
