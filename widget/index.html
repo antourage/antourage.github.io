@@ -252,6 +252,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#localization" class="md-nav__link">
+    Localization
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -363,6 +370,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#localization" class="md-nav__link">
+    Localization
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -434,7 +448,7 @@ And run:<br />
 and
 <div class="highlight"><pre><span></span><code>dependencies {
     ...
-    implementation &#39;com.github.antourage:AntViewer-android:0.2.16&#39;
+    implementation &#39;com.github.antourage:AntViewer-android:2.0.24&#39;
 }
 </code></pre></div></p>
 </div>
@@ -447,30 +461,38 @@ and
 </code></pre></div></p>
 </div>
 <input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">Android</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>        <span class="n">antfab</span><span class="p">.</span><span class="n">authWith</span><span class="p">(</span><span class="n">TEST_API_KEY</span><span class="p">.</span><span class="n">toUpperCase</span><span class="p">(),</span> <span class="n">callback</span> <span class="p">=</span> <span class="p">{</span> <span class="n">userAuthResult</span> <span class="p">-&gt;</span>
-            <span class="k">when</span> <span class="p">(</span><span class="n">userAuthResult</span><span class="p">)</span> <span class="p">{</span>
-                <span class="k">is</span> <span class="n">UserAuthResult</span><span class="p">.</span><span class="n">Success</span> <span class="p">-&gt;</span> <span class="p">{</span>
-                    <span class="n">Log</span><span class="p">.</span><span class="n">d</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span> <span class="s">&quot;Ant authorization successful!&quot;</span><span class="p">)</span>
-                <span class="p">}</span>
-                <span class="k">is</span> <span class="n">UserAuthResult</span><span class="p">.</span><span class="n">Failure</span> <span class="p">-&gt;</span> <span class="p">{</span>
-                    <span class="n">Log</span><span class="p">.</span><span class="n">e</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span> <span class="s">&quot;Ant authorization failed because: ${userAuthResult.cause}&quot;</span><span class="p">)</span>
-                <span class="p">}</span>
-            <span class="p">}</span>
-        <span class="p">})</span>
-</code></pre></div>
+<p>It's static method (no need object init), you can use it anywhere you want (login/app start etc).
+<div class="highlight"><pre><span></span><code><span class="n">AntourageFab</span><span class="p">.</span><span class="n">authWith</span><span class="p">(</span><span class="s">&quot;put_your_apiKey_there&quot;</span><span class="p">,</span> <span class="s">&quot;put_user_id_from_your_base_or_null&quot;</span><span class="p">,</span> <span class="s">&quot;put_user_nickname_from_your_base_or_null&quot;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+</code></pre></div></p>
 </div>
 </div>
 <h3 id="handling-push-notifications">Handling push notifications</h3>
+<div class="tabbed-set" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">iOS</label><div class="tabbed-content">
 <p>To open directly Feed screen from PN interaction handler just get Feed controller and present it modally.
-<div class="highlight"><pre><span></span><code>  <span class="kd">func</span> <span class="nf">userNotificationCenter</span><span class="p">(</span><span class="kc">_</span> <span class="n">center</span><span class="p">:</span> <span class="n">UNUserNotificationCenter</span><span class="p">,</span> <span class="n">didReceive</span> <span class="n">response</span><span class="p">:</span> <span class="n">UNNotificationResponse</span><span class="p">,</span> <span class="n">withCompletionHandler</span> <span class="n">completionHandler</span><span class="p">:</span> <span class="p">@</span><span class="n">escaping</span> <span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">Void</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="nf">userNotificationCenter</span><span class="p">(</span><span class="kc">_</span> <span class="n">center</span><span class="p">:</span> <span class="n">UNUserNotificationCenter</span><span class="p">,</span> <span class="n">didReceive</span> <span class="n">response</span><span class="p">:</span> <span class="n">UNNotificationResponse</span><span class="p">,</span> <span class="n">withCompletionHandler</span> <span class="n">completionHandler</span><span class="p">:</span> <span class="p">@</span><span class="n">escaping</span> <span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">Void</span><span class="p">)</span> <span class="p">{</span>
     <span class="kd">let</span> <span class="nv">userInfo</span> <span class="p">=</span> <span class="n">response</span><span class="p">.</span><span class="n">notification</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">content</span><span class="p">.</span><span class="n">userInfo</span>
     <span class="bp">print</span><span class="p">(</span><span class="s">&quot;</span><span class="si">\(</span><span class="n">userInfo</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)</span>
     <span class="k">if</span> <span class="kd">let</span> <span class="nv">category</span> <span class="p">=</span> <span class="n">userInfo</span><span class="p">[</span><span class="s">&quot;category&quot;</span><span class="p">]</span> <span class="k">as</span><span class="p">?</span> <span class="nb">String</span><span class="p">,</span> <span class="n">category</span> <span class="p">==</span> <span class="s">&quot;antourage&quot;</span> <span class="p">{</span>
-     <span class="n">AntWidget</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="n">showFeed</span><span class="p">()</span>
-  <span class="p">}</span>
+    <span class="n">AntWidget</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="n">showFeed</span><span class="p">()</span>
+<span class="p">}</span>
 </code></pre></div></p>
+</div>
+<input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">Android</label><div class="tabbed-content">
+<p>To open directly Feed screen from received push notification add this to your "show notification" method.
+<div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">intent</span> <span class="p">=</span> <span class="n">Intent</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">AntourageActivity</span><span class="o">::</span><span class="k">class</span><span class="p">.</span><span class="n">java</span><span class="p">)</span>
+<span class="n">intent</span><span class="p">.</span><span class="n">addFlags</span><span class="p">(</span><span class="n">Intent</span><span class="p">.</span><span class="n">FLAG_ACTIVITY_CLEAR_TOP</span> <span class="n">or</span> <span class="n">Intent</span><span class="p">.</span><span class="n">FLAG_ACTIVITY_SINGLE_TOP</span><span class="p">)</span>
+<span class="k">val</span> <span class="py">pendingIntent</span> <span class="p">=</span> <span class="n">PendingIntent</span><span class="p">.</span><span class="n">getActivity</span><span class="p">(</span>
+    <span class="k">this</span><span class="p">,</span> <span class="m">0</span> <span class="cm">/* Request code */</span><span class="p">,</span> <span class="n">intent</span><span class="p">,</span>
+    <span class="n">PendingIntent</span><span class="p">.</span><span class="n">FLAG_ONE_SHOT</span>
+<span class="p">)</span>
+</code></pre></div>
+After that pass pending intent to your notification builder
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="n">setContentIntent</span><span class="p">(</span><span class="n">pendingIntent</span><span class="p">)</span>
+</code></pre></div></p>
+</div>
+</div>
 <h3 id="add-ui-part">Add UI part</h3>
-<div class="tabbed-set" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">iOS</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">iOS</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">ViewController</span><span class="p">:</span> <span class="bp">UIViewController</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nv">widget</span><span class="p">:</span> <span class="n">AntWidget</span><span class="p">!</span> <span class="p">{</span>
         <span class="kr">didSet</span> <span class="p">{</span>
@@ -484,16 +506,34 @@ and
 <span class="p">}</span>
 </code></pre></div>
 </div>
-<input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">Android</label><div class="tabbed-content">
+<input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><label for="__tabbed_5_2">Android</label><div class="tabbed-content">
 <p>Add antourage widget view to the layout:</p>
-<div class="highlight"><pre><span></span><code>    <span class="nt">&lt;com.antourage.weaverlib.ui.fab.AntourageFab</span>
-            <span class="na">android:id=</span><span class="s">&quot;@+id/antfab&quot;</span>
-            <span class="na">android:layout_width=</span><span class="s">&quot;wrap_content&quot;</span>
-            <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
-            <span class="na">app:layout_constraintLeft_toLeftOf=</span><span class="s">&quot;parent&quot;</span>
-            <span class="na">app:layout_constraintBottom_toBottomOf=</span><span class="s">&quot;parent&quot;</span>
-            <span class="na">app:layout_constraintRight_toRightOf=</span><span class="s">&quot;parent&quot;</span> <span class="nt">/&gt;</span>
+<p><div class="highlight"><pre><span></span><code><span class="nt">&lt;com.antourage.weaverlib.ui.fab.AntourageFab</span>
+    <span class="na">android:id=</span><span class="s">&quot;@+id/antfab&quot;</span>
+    <span class="na">android:layout_width=</span><span class="s">&quot;wrap_content&quot;</span>
+    <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+    <span class="na">app:layout_constraintLeft_toLeftOf=</span><span class="s">&quot;parent&quot;</span>
+    <span class="na">app:layout_constraintBottom_toBottomOf=</span><span class="s">&quot;parent&quot;</span>
+    <span class="na">app:layout_constraintRight_toRightOf=</span><span class="s">&quot;parent&quot;</span> <span class="nt">/&gt;</span>
 </code></pre></div>
+Also override onResume and onPause in activity that contains widget:
+<div class="highlight"><pre><span></span><code><span class="k">override</span> <span class="k">fun</span> <span class="nf">onResume</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">super</span><span class="p">.</span><span class="n">onResume</span><span class="p">()</span>
+    <span class="n">antfab</span><span class="p">.</span><span class="n">onResume</span><span class="p">()</span>
+<span class="p">}</span>
+
+<span class="k">override</span> <span class="k">fun</span> <span class="nf">onPause</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">super</span><span class="p">.</span><span class="n">onPause</span><span class="p">()</span>
+    <span class="n">antfab</span><span class="p">.</span><span class="n">onPause</span><span class="p">()</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</div>
+</div>
+<h3 id="localization">Localization</h3>
+<div class="tabbed-set" data-tabs="6:1"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><label for="__tabbed_6_1">Android</label><div class="tabbed-content">
+<p>By default android widget will use device's language: Swedish if it is chosen as device’s default language and English in other cases. But if you want to force app to use language that differs from device’s one - you can use method setLocale(lang: String). Currently widget supports only English("en") and Swedish("sv").
+<div class="highlight"><pre><span></span><code><span class="n">antfab</span><span class="p">.</span><span class="n">setLocale</span><span class="p">(</span><span class="s">&quot;en&quot;</span><span class="p">)</span> <span class="c1">// or &quot;sv&quot;</span>
+</code></pre></div></p>
 </div>
 </div>
 <table>
