@@ -13,7 +13,7 @@
     
     
       
-        <title>Widget - Antourage</title>
+        <title>Get Started - Antourage</title>
       
     
     
@@ -58,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#antourage-widget-sdk" class="md-skip">
+        <a href="#get-started-antourage-sdk" class="md-skip">
           Skip to content
         </a>
       
@@ -87,7 +87,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Widget
+              Get Started
             
           </span>
         </div>
@@ -181,12 +181,12 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Widget
+        Get Started
         <span class="md-nav__icon md-icon"></span>
       </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
-      Widget
+      Get Started
     </a>
     
       
@@ -201,13 +201,6 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#example-ios-only" class="md-nav__link">
-    Example (iOS only)
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#requirements" class="md-nav__link">
@@ -232,15 +225,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#auth" class="md-nav__link">
-    Auth
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#handling-push-notifications" class="md-nav__link">
-    Handling push notifications
+  <a href="#authentication" class="md-nav__link">
+    Authentication
   </a>
   
 </li>
@@ -252,28 +238,14 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#localization" class="md-nav__link">
-    Localization
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#author" class="md-nav__link">
-    Author
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#license" class="md-nav__link">
-    License
+  <a href="#examples" class="md-nav__link">
+    Examples
   </a>
   
 </li>
@@ -293,6 +265,18 @@
   <li class="md-nav__item">
     <a href="../push/" class="md-nav__link">
       Push notfications
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../localization/" class="md-nav__link">
+      Localization
     </a>
   </li>
 
@@ -321,13 +305,6 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#example-ios-only" class="md-nav__link">
-    Example (iOS only)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#requirements" class="md-nav__link">
     Requirements
   </a>
@@ -350,15 +327,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#auth" class="md-nav__link">
-    Auth
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#handling-push-notifications" class="md-nav__link">
-    Handling push notifications
+  <a href="#authentication" class="md-nav__link">
+    Authentication
   </a>
   
 </li>
@@ -370,28 +340,14 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#localization" class="md-nav__link">
-    Localization
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#author" class="md-nav__link">
-    Author
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#license" class="md-nav__link">
-    License
+  <a href="#examples" class="md-nav__link">
+    Examples
   </a>
   
 </li>
@@ -409,14 +365,16 @@
               
                 
                 
-                <h1 id="antourage-widget-sdk">Antourage Widget SDK</h1>
-<h2 id="example-ios-only">Example (iOS only)</h2>
-<p>To run the example project, clone the repo, and run <code>pod install</code> from the Example directory first.</p>
+                <h1 id="get-started-antourage-sdk">Get Started - Antourage SDK</h1>
+<p>The Antourage SDK is the easiest way to integrate your app with Antourage.
+Our SDK currently works with <strong><em>native iOS</em></strong>, <strong><em>native Android</em></strong>, <strong><em>Capacitor(Ionic)</em></strong>, and <strong><em>React Native</em></strong> technologies. For each technology we prepared profound guide with code semples.</p>
 <h2 id="requirements">Requirements</h2>
-<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">iOS</label><div class="tabbed-content">
+<p>For successful integration please see our requirements below and be sure that everything compatible.</p>
+<div class="tabbed-set" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">iOS</label><div class="tabbed-content">
 <ul>
 <li>iOS 11.3 +  </li>
 <li>Cocoapods</li>
+<li>Landscape orientation support</li>
 </ul>
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Android</label><div class="tabbed-content">
@@ -424,19 +382,49 @@
 <li>Minimum Android SDK: Antourage widget requires a minimum API level of 21;</li>
 <li>Starting from 0.2.0 version library has migrated to the androidX, so make sure that you have</li>
 </ul>
+</div>
+<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">React native (coming soon)</label><div class="tabbed-content">
+<ul>
+<li>
+<p>react-native &gt;= 0.62.2</p>
+</li>
+<li>
+<p>iOS:</p>
+<ul>
+<li>iOS 11.3 +  </li>
+<li>Cocoapods</li>
+<li>Landscape orientation support</li>
+</ul>
+</li>
+<li>
+<p>Android:</p>
+<ul>
+<li>
+<p>Minimum Android SDK: Antourage widget requires a minimum API level of 21;</p>
+</li>
+<li>
+<p>Starting from 0.2.0 version library has migrated to the androidX, so make sure that you have</p>
+</li>
+</ul>
 <p><div class="highlight"><pre><span></span><code>android.useAndroidX=true
 android.enableJetifier=true
 </code></pre></div>
-in your gradle.properties</p>
+    in your gradle.properties</p>
+</li>
+</ul>
 </div>
 </div>
 <h2 id="installation">Installation</h2>
-<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">iOS</label><div class="tabbed-content">
-<p>Antourage is available through <a href="https://cocoapods.org">CocoaPods</a>. <br />
-To install it, simply add the following line to your Podfile:<br />
+<div class="tabbed-set" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">iOS</label><div class="tabbed-content">
+<p>The Antourage SDK for iOS is available as a <a href="https://cocoapods.org/pods/Antourage">CocoaPods pod</a>. CocoaPods is an open source dependency manager for Swift and Objective-C Cocoa projects.
+If you don't already have the CocoaPods tool, install it on macOS by running the following command from the terminal. For details, see the <a href="https://guides.cocoapods.org/using/getting-started.html">CocoaPods Getting Started guide</a>.
+<div class="highlight"><pre><span></span><code>brew install cocoapods
+</code></pre></div>
+1. Add the dependency for Antourage to your project's Podfile:<br />
 <code>pod 'Antourage'</code><br />
-And run:<br />
-<code>$ pod install</code></p>
+2. Run <code>$ pod install</code> to install the dependency<br />
+Also please make sure to use Cocoapods v1.10 and later.<br />
+Note: You may need to update the <a href="https://github.com/CocoaPods/Specs">CocoaPods Master Spec Repo</a> by running <code>$ pod repo update master</code> in order to fetch the latest specs for Antourage.</p>
 </div>
 <input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Android</label><div class="tabbed-content">
 <p>Add:
@@ -452,12 +440,27 @@ and
 }
 </code></pre></div></p>
 </div>
+<input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><label for="__tabbed_2_3">React native (coming soon)</label><div class="tabbed-content">
+<p>Antourage SDK is installed with <a href="https://www.npmjs.com/">npm (Node Package Manager)</a>. To install the SDK go through steps below:<br />
+<strong>Step 1</strong><br />
+<div class="highlight"><pre><span></span><code>npm i react-native-antourage --save
+</code></pre></div>
+<strong>Step 2</strong><br />
+Open ios directory from terminal and install pods:
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> ios
+pod install
+</code></pre></div></p>
+</div>
 </div>
 <h2 id="usage">Usage</h2>
-<h3 id="auth">Auth</h3>
-<div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">iOS</label><div class="tabbed-content">
+<h3 id="authentication">Authentication</h3>
+<p>Please be sure that you already have the <strong><em>API key</em></strong> for Antourage, otherwise please contact <a href="mailto:pavlo.hodysh@antourage.com">Antourage</a> to request one for your application. <br />
+Optionally you can provide <strong><em>refUserId</em></strong> for user identification in our system and <strong><em>nickname</em></strong> to pre-setup it for chat (user can change it any time after).</p>
+<div class="tabbed-set" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">iOS</label><div class="tabbed-content">
 <p>It's static method (no need object init), you can use it anywhere you want (login/app start etc).
-<div class="highlight"><pre><span></span><code><span class="n">AntWidget</span><span class="p">.</span><span class="n">authWith</span><span class="p">(</span><span class="n">apiKey</span><span class="p">:</span> <span class="s">&quot;put_your_apiKey_there&quot;</span><span class="p">,</span> <span class="n">refUserId</span><span class="p">:</span> <span class="s">&quot;put_user_id_from_your_base_or_nil&quot;</span><span class="p">,</span> <span class="n">nickname</span><span class="p">:</span> <span class="s">&quot;put_user_nickname_from_your_base_or_nil&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="kd">import</span> <span class="nc">Antourage</span>
+
+<span class="n">AntWidget</span><span class="p">.</span><span class="n">authWith</span><span class="p">(</span><span class="n">apiKey</span><span class="p">:</span> <span class="s">&quot;put_your_apiKey_there&quot;</span><span class="p">,</span> <span class="n">refUserId</span><span class="p">:</span> <span class="s">&quot;put_user_id_from_your_base_or_nil&quot;</span><span class="p">,</span> <span class="n">nickname</span><span class="p">:</span> <span class="s">&quot;put_user_nickname_from_your_base_or_nil&quot;</span><span class="p">)</span>
 </code></pre></div></p>
 </div>
 <input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">Android</label><div class="tabbed-content">
@@ -465,35 +468,25 @@ and
 <div class="highlight"><pre><span></span><code><span class="n">AntourageFab</span><span class="p">.</span><span class="n">authWith</span><span class="p">(</span><span class="s">&quot;put_your_apiKey_there&quot;</span><span class="p">,</span> <span class="s">&quot;put_user_id_from_your_base_or_null&quot;</span><span class="p">,</span> <span class="s">&quot;put_user_nickname_from_your_base_or_null&quot;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
 </code></pre></div></p>
 </div>
-</div>
-<h3 id="handling-push-notifications">Handling push notifications</h3>
-<div class="tabbed-set" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">iOS</label><div class="tabbed-content">
-<p>To open directly Feed screen from PN interaction handler just get Feed controller and present it modally.
-<div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="nf">userNotificationCenter</span><span class="p">(</span><span class="kc">_</span> <span class="n">center</span><span class="p">:</span> <span class="n">UNUserNotificationCenter</span><span class="p">,</span> <span class="n">didReceive</span> <span class="n">response</span><span class="p">:</span> <span class="n">UNNotificationResponse</span><span class="p">,</span> <span class="n">withCompletionHandler</span> <span class="n">completionHandler</span><span class="p">:</span> <span class="p">@</span><span class="n">escaping</span> <span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">Void</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kd">let</span> <span class="nv">userInfo</span> <span class="p">=</span> <span class="n">response</span><span class="p">.</span><span class="n">notification</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">content</span><span class="p">.</span><span class="n">userInfo</span>
-    <span class="bp">print</span><span class="p">(</span><span class="s">&quot;</span><span class="si">\(</span><span class="n">userInfo</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="kd">let</span> <span class="nv">category</span> <span class="p">=</span> <span class="n">userInfo</span><span class="p">[</span><span class="s">&quot;category&quot;</span><span class="p">]</span> <span class="k">as</span><span class="p">?</span> <span class="nb">String</span><span class="p">,</span> <span class="n">category</span> <span class="p">==</span> <span class="s">&quot;antourage&quot;</span> <span class="p">{</span>
-    <span class="n">AntWidget</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="n">showFeed</span><span class="p">()</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</div>
-<input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">Android</label><div class="tabbed-content">
-<p>To open directly Feed screen from received push notification add this to your "show notification" method.
-<div class="highlight"><pre><span></span><code><span class="k">val</span> <span class="py">intent</span> <span class="p">=</span> <span class="n">Intent</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">AntourageActivity</span><span class="o">::</span><span class="k">class</span><span class="p">.</span><span class="n">java</span><span class="p">)</span>
-<span class="n">intent</span><span class="p">.</span><span class="n">addFlags</span><span class="p">(</span><span class="n">Intent</span><span class="p">.</span><span class="n">FLAG_ACTIVITY_CLEAR_TOP</span> <span class="n">or</span> <span class="n">Intent</span><span class="p">.</span><span class="n">FLAG_ACTIVITY_SINGLE_TOP</span><span class="p">)</span>
-<span class="k">val</span> <span class="py">pendingIntent</span> <span class="p">=</span> <span class="n">PendingIntent</span><span class="p">.</span><span class="n">getActivity</span><span class="p">(</span>
-    <span class="k">this</span><span class="p">,</span> <span class="m">0</span> <span class="cm">/* Request code */</span><span class="p">,</span> <span class="n">intent</span><span class="p">,</span>
-    <span class="n">PendingIntent</span><span class="p">.</span><span class="n">FLAG_ONE_SHOT</span>
-<span class="p">)</span>
-</code></pre></div>
-After that pass pending intent to your notification builder
-<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="n">setContentIntent</span><span class="p">(</span><span class="n">pendingIntent</span><span class="p">)</span>
+<input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><label for="__tabbed_3_3">React native (coming soon)</label><div class="tabbed-content">
+<p>You should to try call this method once per app lifecycle.
+<div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">Antourage</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react-native-antourage&#39;</span><span class="p">;</span>
+
+<span class="c1">// ...</span>
+
+<span class="nx">Antourage</span><span class="p">.</span><span class="nx">authWithApiKey</span><span class="p">(</span><span class="s1">&#39;put_your_apiKey_there&#39;</span><span class="p">,</span> 
+<span class="s1">&#39;put_user_id_from_your_base_or_null&#39;</span><span class="p">,</span> 
+<span class="s1">&#39;put_user_nickname_from_your_base_or_null&#39;</span><span class="p">);</span>
 </code></pre></div></p>
 </div>
 </div>
 <h3 id="add-ui-part">Add UI part</h3>
-<div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">iOS</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">ViewController</span><span class="p">:</span> <span class="bp">UIViewController</span> <span class="p">{</span>
+<p>The main feature of Antourage SDK is a widget - a simple button that should be placed on your screen. You can set a predefined position and extra margins for it. The widget will fully work only after successful authorization.<br />
+If you need to know when the Feed screen appears and disappears you can use callbacks.</p>
+<div class="tabbed-set" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">iOS</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="kd">import</span> <span class="nc">Antourage</span>
+
+<span class="kd">class</span> <span class="nc">ViewController</span><span class="p">:</span> <span class="bp">UIViewController</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nv">widget</span><span class="p">:</span> <span class="n">AntWidget</span><span class="p">!</span> <span class="p">{</span>
         <span class="kr">didSet</span> <span class="p">{</span>
         <span class="n">view</span><span class="p">.</span><span class="n">addSubview</span><span class="p">(</span><span class="n">widget</span><span class="p">.</span><span class="n">view</span><span class="p">)</span>
@@ -506,34 +499,31 @@ After that pass pending intent to your notification builder
 <span class="p">}</span>
 </code></pre></div>
 </div>
-<input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><label for="__tabbed_5_2">Android</label><div class="tabbed-content">
+<input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">Android</label><div class="tabbed-content">
 <p>Add antourage widget view to the layout:</p>
-<p><div class="highlight"><pre><span></span><code><span class="nt">&lt;com.antourage.weaverlib.ui.fab.AntourageFab</span>
-    <span class="na">android:id=</span><span class="s">&quot;@+id/antfab&quot;</span>
-    <span class="na">android:layout_width=</span><span class="s">&quot;wrap_content&quot;</span>
-    <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
-    <span class="na">app:layout_constraintLeft_toLeftOf=</span><span class="s">&quot;parent&quot;</span>
-    <span class="na">app:layout_constraintBottom_toBottomOf=</span><span class="s">&quot;parent&quot;</span>
-    <span class="na">app:layout_constraintRight_toRightOf=</span><span class="s">&quot;parent&quot;</span> <span class="nt">/&gt;</span>
-</code></pre></div>
-Also override onResume and onPause in activity that contains widget:
-<div class="highlight"><pre><span></span><code><span class="k">override</span> <span class="k">fun</span> <span class="nf">onResume</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">super</span><span class="p">.</span><span class="n">onResume</span><span class="p">()</span>
-    <span class="n">antfab</span><span class="p">.</span><span class="n">onResume</span><span class="p">()</span>
-<span class="p">}</span>
+</div>
+<input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><label for="__tabbed_4_3">React native (coming soon)</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="nx">AntourageView</span> <span class="nx">from</span> <span class="s1">&#39;react-native-antourage&#39;</span><span class="p">;</span>
 
-<span class="k">override</span> <span class="k">fun</span> <span class="nf">onPause</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">super</span><span class="p">.</span><span class="n">onPause</span><span class="p">()</span>
-    <span class="n">antfab</span><span class="p">.</span><span class="n">onPause</span><span class="p">()</span>
+<span class="c1">// ...</span>
+
+<span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="o">&lt;</span><span class="nx">View</span> <span class="nx">style</span><span class="o">=</span><span class="p">{</span><span class="nx">styles</span><span class="p">.</span><span class="nx">container</span><span class="p">}</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">Text</span> <span class="nx">style</span><span class="o">=</span><span class="p">{</span><span class="nx">styles</span><span class="p">.</span><span class="nx">welcome</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">Welcome</span> <span class="nx">to</span> <span class="nx">React</span> <span class="nx">Native</span><span class="o">!&lt;</span><span class="err">/Text&gt;</span>
+        <span class="o">&lt;</span><span class="nx">Text</span> <span class="nx">style</span><span class="o">=</span><span class="p">{</span><span class="nx">styles</span><span class="p">.</span><span class="nx">instructions</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">To</span> <span class="nx">get</span> <span class="nx">started</span><span class="p">,</span> <span class="nx">edit</span> <span class="nx">App</span><span class="p">.</span><span class="nx">js</span><span class="o">&lt;</span><span class="err">/Text&gt;</span>
+        <span class="o">&lt;</span><span class="nx">Text</span> <span class="nx">style</span><span class="o">=</span><span class="p">{</span><span class="nx">styles</span><span class="p">.</span><span class="nx">instructions</span><span class="p">}</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">instructions</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/Text&gt;</span>
+        <span class="o">&lt;</span><span class="nx">AntourageView</span>
+        <span class="nx">onViewerAppear</span><span class="o">=</span><span class="p">{()</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Appeared&#39;</span><span class="p">)}</span>
+        <span class="nx">onViewerDisappear</span><span class="o">=</span><span class="p">{()</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Disappeared&#39;</span><span class="p">)}</span>
+        <span class="nx">widgetPosition</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;bottomRight&#39;</span><span class="p">}</span>
+        <span class="nx">widgetLocale</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;en&#39;</span><span class="p">}</span>
+        <span class="nx">widgetMargins</span><span class="o">=</span><span class="p">{{</span> <span class="nx">vertical</span><span class="o">:</span> <span class="mf">50</span><span class="p">,</span> <span class="nx">horizontal</span><span class="o">:</span> <span class="mf">20</span> <span class="p">}}</span>
+        <span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="err">/View&gt;</span>
+    <span class="p">);</span>
 <span class="p">}</span>
-</code></pre></div></p>
-</div>
-</div>
-<h3 id="localization">Localization</h3>
-<div class="tabbed-set" data-tabs="6:1"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><label for="__tabbed_6_1">Android</label><div class="tabbed-content">
-<p>By default android widget will use device's language: Swedish if it is chosen as device’s default language and English in other cases. But if you want to force app to use language that differs from device’s one - you can use method setLocale(lang: String). Currently widget supports only English("en") and Swedish("sv").
-<div class="highlight"><pre><span></span><code><span class="n">antfab</span><span class="p">.</span><span class="n">setLocale</span><span class="p">(</span><span class="s">&quot;en&quot;</span><span class="p">)</span> <span class="c1">// or &quot;sv&quot;</span>
-</code></pre></div></p>
+</code></pre></div>
 </div>
 </div>
 <table>
@@ -567,11 +557,25 @@ Also override onResume and onPause in activity that contains widget:
 </tr>
 </tbody>
 </table>
-<h2 id="author">Author</h2>
-<p>Mykola Vaniurskyi, mv@leobit.com<br />
-Nazar Mykhailevych, nm@leobit.com</p>
-<h2 id="license">License</h2>
-<p>Antourage is available under the MIT license. See the LICENSE file for more info.</p>
+<h2 id="examples">Examples</h2>
+<div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">iOS</label><div class="tabbed-content">
+<p>To run the example project, clone the <a href="https://github.com/antourage/AntViewer">Antourage repo</a>, and run <code>pod install</code> from the Example directory first. Once Cocoapods finishes installing, open the AntViewer_ios.xcworkspace and you will find a basic Swift project.</p>
+</div>
+<input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><label for="__tabbed_5_2">React native (coming soon)</label><div class="tabbed-content">
+<p>To run the example project, clone the <a href="https://google.com">Antourage repo</a> first.<br />
+Run <code>yarn bootstrap</code> in the root directory to install the required dependencies for each package.
+While developing, you can run the example app for testing needs.<br />
+To start the packager:
+<div class="highlight"><pre><span></span><code>yarn example start
+</code></pre></div>
+To run the example app on Android:
+<div class="highlight"><pre><span></span><code>yarn example android
+</code></pre></div>
+To run the example app on iOS:
+<div class="highlight"><pre><span></span><code>yarn example ios
+</code></pre></div></p>
+</div>
+</div>
                 
               
               
