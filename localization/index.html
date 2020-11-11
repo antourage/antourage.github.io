@@ -8,8 +8,9 @@
       
       
       
+      
       <link rel="shortcut icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.4">
     
     
       
@@ -17,10 +18,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.bc7e593a.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.358818c7.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab28b872.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.f0267088.min.css">
         
       
     
@@ -241,14 +242,17 @@
                 
                 <h1 id="localization">Localization</h1>
 <p>By default android widget will use device's language: Swedish if it is chosen as device’s default language and English in other cases. On iOS side we use application's language.</p>
-<p>Currently widget supports only English("en") and Swedish("sv").
-If you want to force app to use language that differs from current one - you can use methods below:</p>
-<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Android</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">iOS</label><div class="tabbed-content">
+<p>You can set localization buy using a code below:
+<div class="highlight"><pre><span></span><code><span class="n">AntWidget</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="n">widgetLocale</span> <span class="p">=</span> <span class="p">.</span><span class="n">english</span> <span class="c1">//.swedish</span>
+</code></pre></div></p>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Android</label><div class="tabbed-content">
 <p>You can set localization buy executing setLocale in antourage fab object.
 <div class="highlight"><pre><span></span><code><span class="n">antfab</span><span class="p">.</span><span class="n">setLocale</span><span class="p">(</span><span class="s">&quot;en&quot;</span><span class="p">)</span> <span class="c1">// or &quot;sv&quot;</span>
 </code></pre></div></p>
 </div>
-<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">React native (coming soon)</label><div class="tabbed-content">
+<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">React native</label><div class="tabbed-content">
 <p>You can set localization buy setting widgetLocale property in antourage view componet.
 <div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="nx">AntourageView</span> <span class="nx">from</span> <span class="s1">&#39;react-native-antourage&#39;</span><span class="p">;</span>
 
@@ -256,6 +260,14 @@ If you want to force app to use language that differs from current one - you can
 
 <span class="o">&lt;</span><span class="nx">AntourageView</span> <span class="nx">widgetLocale</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;en&#39;</span><span class="p">}</span> <span class="o">/&gt;</span> <span class="c1">// or &quot;sv&quot;</span>
 </code></pre></div></p>
+</div>
+<input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><label for="__tabbed_1_4">Capacitor(Ionic)</label><div class="tabbed-content">
+<p>If you want to force app to use language that differs from current one - you can use methods below:</p>
+<div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">Plugins</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@capacitor/core&#39;</span><span class="p">;</span>
+<span class="kr">const</span> <span class="p">{</span> <span class="nx">AntViewerPlugin</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">Plugins</span><span class="p">;</span>
+
+<span class="nx">AntViewerPlugin</span><span class="p">.</span><span class="nx">setLocale</span><span class="p">({</span> <span class="nx">locale</span><span class="o">:</span> <span class="s2">&quot;en&quot;</span> <span class="p">});</span> <span class="c1">// or &quot;sv&quot;</span>
+</code></pre></div>
 </div>
 </div>
                 
@@ -310,8 +322,8 @@ If you want to force app to use language that differs from current one - you can
       
     </div>
     
-      <script src="../assets/javascripts/vendor.6a3d08fc.min.js"></script>
-      <script src="../assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../assets/javascripts/vendor.7e0ee788.min.js"></script>
+      <script src="../assets/javascripts/bundle.b3a72adc.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
