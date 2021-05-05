@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.3">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.6f955dcd.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.e35208c4.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
@@ -223,32 +223,9 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Localization
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         Localization
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -273,14 +250,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -296,18 +265,18 @@
 <p>By default the Android widget will use the device language. English, Swedish and Serbian are availabe. More to come. On iOS we use the application language.</p>
 <p>If you want to force app to use language that differs from current one - you can use methods below:</p>
 <div class="tabbed-set" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">iOS</label><div class="tabbed-content">
-<p>You can set localization buy using a code below:
+<p>You can set localization by using a code below:
 <div class="highlight"><pre><span></span><code><span class="n">AntWidget</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="n">widgetLocale</span> <span class="p">=</span> <span class="p">.</span><span class="n">english</span> <span class="c1">//.swedish</span>
 </code></pre></div></p>
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Android</label><div class="tabbed-content">
-<p>You can set localization buy executing setLocale in antourage fab object.
+<p>You can set localization by executing setLocale in antourage fab object.
 <div class="highlight"><pre><span></span><code><span class="n">antfab</span><span class="p">.</span><span class="na">setLocale</span><span class="p">(</span><span class="s">&quot;en&quot;</span><span class="p">)</span> <span class="c1">// or &quot;sv&quot;</span>
 </code></pre></div></p>
 </div>
 <input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">React native</label><div class="tabbed-content">
-<p>You can set localization buy setting widgetLocale property in antourage view componet.
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="nx">AntourageView</span> <span class="nx">from</span> <span class="s1">&#39;react-native-antourage&#39;</span><span class="p">;</span>
+<p>You can set localization by setting widgetLocale property in antourage view componet.
+<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="nx">AntourageView</span> <span class="k">from</span> <span class="s1">&#39;react-native-antourage&#39;</span><span class="p">;</span>
 
 <span class="c1">// ...</span>
 
@@ -316,7 +285,7 @@
 </div>
 <input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><label for="__tabbed_1_4">Capacitor(Ionic)</label><div class="tabbed-content">
 <p>If you want to force app to use language that differs from current one - you can use methods below:</p>
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Plugins</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@capacitor/core&#39;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Plugins</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">&#39;@capacitor/core&#39;</span><span class="p">;</span>
 <span class="kd">const</span> <span class="p">{</span> <span class="nx">AntViewerPlugin</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">Plugins</span><span class="p">;</span>
 
 <span class="nx">AntViewerPlugin</span><span class="p">.</span><span class="nx">setLocale</span><span class="p">({</span> <span class="nx">locale</span><span class="o">:</span> <span class="s2">&quot;en&quot;</span> <span class="p">});</span> <span class="c1">// or &quot;sv&quot;</span>
