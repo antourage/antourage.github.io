@@ -525,7 +525,7 @@ in your gradle.properties</p>
 </div>
 </div>
 <h2 id="installation">Installation</h2>
-<div class="tabbed-set" data-tabs="2:5"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">iOS</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="2:4"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">iOS</label><div class="tabbed-content">
 <p>The Antourage SDK for iOS is available as a <a href="https://cocoapods.org/pods/Antourage">CocoaPods pod</a>. CocoaPods is an open source dependency manager for Swift and Objective-C Cocoa projects.
 If you don't already have the CocoaPods installed, see the <a href="https://guides.cocoapods.org/using/getting-started.html">CocoaPods Getting Started guide</a>.</p>
 <ol>
@@ -600,41 +600,19 @@ Also you need to add <code>antPlugin.onPause();</code> and <code>antPlugin.onRes
 </li>
 </ol>
 </div>
-<input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><label for="__tabbed_2_5">JavaScript</label><div class="tabbed-content">
-<p>The following code should be added to a web-site:
-<div class="highlight"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://{host}/widget.css&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> 
-        <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://{host}/widget.js&quot;</span> 
-        <span class="na">data-anonymous-app-client-id</span><span class="o">=</span><span class="s">&quot;{anonymous-app-client-id}&quot;</span> 
-        <span class="na">data-anonymous-app-client-secret</span><span class="o">=</span><span class="s">&quot;{anonymous-app-client-secret}&quot;</span> 
-        <span class="na">data-app-client-id</span><span class="o">=</span><span class="s">&quot;{app-client-id}&quot;</span> 
-        <span class="na">defer</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://{host}/widget-auth.js&quot;</span> <span class="na">defer</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</code></pre></div>
-It is recommended to place this code at the end of <code>&lt;head&gt;</code> or <code>&lt;body&gt;</code> element.
-The script will inject all other necessary elements. The actual widget operates inside of iframe.</p>
-<p>This data will be provided before integration:</p>
-<ul>
-<li>
-<p><code>host</code> is a website of Antourage (exact domain name to be determined later)</p>
-</li>
-<li>
-<p><code>anonymous-app-client-id</code> and <code>anonymous-app-client-secret</code> are for getting access to widget for anonymous users</p>
-</li>
-<li>
-<p><code>app-client-id</code> is for getting access to widget for authorized users</p>
-</li>
-</ul>
-</div>
 </div>
 <h2 id="usage">Usage</h2>
 <h3 id="add-an-antourage-config-file">Add an Antourage config file</h3>
-<p>Please be sure that you already have the config file, otherwise please contact <a href="mailto:pavlo.hodysh@antourage.com">Antourage</a> to request one for your application.</p>
-<div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">iOS</label><div class="tabbed-content">
+<p>Please be sure that you already have the config file, otherwise please contact <a href="mailto:pavlo.hodysh@antourage.com">Antourage</a> to request one for your application.
+The file contains a data for authorization (app client ids, redirect urls, etc.)</p>
+<div class="tabbed-set" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">iOS</label><div class="tabbed-content">
 <p>Move your <em>Antourage-Info.plist</em> config file into your Xcode project. If prompted, select to add the config file to all targets.</p>
 </div>
 <input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">Android</label><div class="tabbed-content">
 <p>Move your <em>antourage_info.json</em> config file into your project's assets folder. If there's no assets folder in your project - simply create it at app/src/main/.</p>
+</div>
+<input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><label for="__tabbed_3_3">JavaScript</label><div class="tabbed-content">
+<p>Place your config file <code>antourage_info.json</code> in your website root directory. This folder is often named public_html, htdocs, www, or wwwroot, depending on your web host and settings.</p>
 </div>
 </div>
 <h3 id="initialization">Initialization</h3>
@@ -684,7 +662,7 @@ The script will inject all other necessary elements. The actual widget operates 
 <h3 id="add-ui-part">Add UI part</h3>
 <p>The main feature of Antourage SDK is a widget - a simple button that should be placed on your screen. You can set a predefined position and extra margins for it. The widget will fully work only after successful authorization.<br />
 If you need to know when the Feed screen appears and disappears you can use callbacks.</p>
-<div class="tabbed-set" data-tabs="5:4"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">iOS</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="5:5"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">iOS</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="kd">import</span> <span class="nc">Antourage</span>
 
 <span class="kd">class</span> <span class="nc">ViewController</span><span class="p">:</span> <span class="bp">UIViewController</span> <span class="p">{</span>
@@ -751,6 +729,19 @@ Also override onResume and onPause in activity that contains widget:
 
 <span class="nx">AntViewerPlugin</span><span class="p">.</span><span class="nx">hideWidget</span><span class="p">();</span>
 </code></pre></div>
+</div>
+<input id="__tabbed_5_5" name="__tabbed_5" type="radio" /><label for="__tabbed_5_5">JavaScript</label><div class="tabbed-content">
+<p>The following code should be added to a web-site:
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://antourage.com/widget.{version}.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">defer</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://antourage.com/widget.{version}.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">defer</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://antourage.com/widget-auth.{version}.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+It is recommended to place this code at the end of <code>&lt;head&gt;</code> or <code>&lt;body&gt;</code> element.
+The script will inject all other necessary elements. The actual widget operates inside of iframe.</p>
+<p>This data will be provided before integration:    </p>
+<ul>
+<li><code>version</code> - the version number of the application you are adding</li>
+</ul>
 </div>
 </div>
 <h4 id="widget-position-and-margins">Widget position and margins</h4>
