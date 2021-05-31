@@ -464,7 +464,7 @@ android.enableJetifier=true
 in your gradle.properties</li>
 </ul>
 </div>
-<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">React native</label><div class="tabbed-content">
+<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">React Native</label><div class="tabbed-content">
 <ul>
 <li>react-native &gt;= 0.62.2</li>
 <li>iOS:<ul>
@@ -565,10 +565,10 @@ and
 }
 </code></pre></div></p>
 </div>
-<input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><label for="__tabbed_2_3">React native</label><div class="tabbed-content">
+<input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><label for="__tabbed_2_3">React Native</label><div class="tabbed-content">
 <p>Antourage SDK is installed with <a href="https://www.npmjs.com/">npm (Node Package Manager)</a>. To install the SDK go through steps below:<br />
 <strong>Step 1</strong><br />
-<div class="highlight"><pre><span></span><code>npm i react-native-antourage --save
+<div class="highlight"><pre><span></span><code>npm i antourage-react-native --save
 </code></pre></div>
 <strong>Step 2</strong><br />
 Open ios directory from terminal and install pods:
@@ -635,15 +635,13 @@ The file contains a data for authorization (app client ids, redirect urls, etc.)
 <div class="highlight"><pre><span></span><code><span class="n">AntourageFab</span><span class="p">.</span><span class="na">configure</span><span class="p">(</span><span class="n">yourContext</span><span class="p">)</span>
 </code></pre></div></p>
 </div>
-<input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><label for="__tabbed_4_3">React native</label><div class="tabbed-content">
-<p>You should try to call this method once per app lifecycle.
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Antourage</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">&#39;react-native-antourage&#39;</span><span class="p">;</span>
+<input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><label for="__tabbed_4_3">React Native</label><div class="tabbed-content">
+<p>You should to try call this method once per app lifecycle.
+<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Antourage</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">&#39;antourage-react-native&#39;</span><span class="p">;</span>
 
 <span class="c1">// ...</span>
 
-<span class="nx">Antourage</span><span class="p">.</span><span class="nx">authWithApiKey</span><span class="p">(</span><span class="s1">&#39;put_your_apiKey_there&#39;</span><span class="p">,</span> 
-<span class="s1">&#39;put_user_id_from_your_base_or_null&#39;</span><span class="p">,</span> 
-<span class="s1">&#39;put_user_nickname_from_your_base_or_null&#39;</span><span class="p">);</span>
+<span class="nx">Antourage</span><span class="p">.</span><span class="nx">configure</span><span class="p">();</span>
 </code></pre></div></p>
 </div>
 <input id="__tabbed_4_4" name="__tabbed_4" type="radio" /><label for="__tabbed_4_4">Capacitor(Ionic)</label><div class="tabbed-content">
@@ -693,8 +691,8 @@ Also override onResume and onPause in activity that contains widget:
 <span class="p">}</span>
 </code></pre></div></p>
 </div>
-<input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><label for="__tabbed_5_3">React native</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="nx">AntourageView</span> <span class="k">from</span> <span class="s1">&#39;react-native-antourage&#39;</span><span class="p">;</span>
+<input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><label for="__tabbed_5_3">React Native</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="nx">AntourageView</span> <span class="k">from</span> <span class="s1">&#39;antourage-react-native&#39;</span><span class="p">;</span>
 
 <span class="c1">// ...</span>
 
@@ -776,8 +774,8 @@ The script will inject all other necessary elements. The actual widget operates 
 <span class="c1">// ...</span>
 </code></pre></div>
 </div>
-<input id="__tabbed_6_3" name="__tabbed_6" type="radio" /><label for="__tabbed_6_3">React native</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="nx">AntourageView</span> <span class="k">from</span> <span class="s1">&#39;react-native-antourage&#39;</span><span class="p">;</span>
+<input id="__tabbed_6_3" name="__tabbed_6" type="radio" /><label for="__tabbed_6_3">React Native</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="nx">AntourageView</span> <span class="k">from</span> <span class="s1">&#39;antourage-react-native&#39;</span><span class="p">;</span>
 
 <span class="c1">// ...</span>
 
@@ -838,17 +836,17 @@ The script will inject all other necessary elements. The actual widget operates 
 <p>Your app may support only portrait orientation, but our widget should be able to use landscape orientation while playing video.</p>
 <p>First of all you should enable ladnscape orientation in xcode project.
 <img src="../img/screenshots/orientation.png" alt="Screenshots" width="100%" /></p>
-<div class="tabbed-set" data-tabs="7:3"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><label for="__tabbed_7_1">iOS native</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="7:3"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><label for="__tabbed_7_1">iOS</label><div class="tabbed-content">
 <p>You can lock orientation for specific controllers by adding code below to them: 
 <div class="highlight"><pre><span></span><code><span class="kr">override</span> <span class="kd">var</span> <span class="nv">supportedInterfaceOrientations</span><span class="p">:</span> <span class="n">UIInterfaceOrientationMask</span> <span class="p">{</span>
     <span class="k">return</span> <span class="p">[.</span><span class="n">portrait</span><span class="p">]</span>
 <span class="p">}</span>
 </code></pre></div></p>
 </div>
-<input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><label for="__tabbed_7_2">React native</label><div class="tabbed-content">
+<input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><label for="__tabbed_7_2">React Native</label><div class="tabbed-content">
 <p>You can use some third-party library (<a href="https://github.com/wonday/react-native-orientation-locker">react-native-orientation-locker</a>) to be able to lock orientations occasionally depending on the content.
 Just add two listeners to handle widget state:
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="nx">AntourageView</span> <span class="k">from</span> <span class="s1">&#39;react-native-antourage&#39;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="nx">AntourageView</span> <span class="k">from</span> <span class="s1">&#39;antourage-react-native&#39;</span><span class="p">;</span>
 <span class="k">import</span> <span class="nx">Orientation</span> <span class="k">from</span> <span class="s1">&#39;react-native-orientation-locker&#39;</span><span class="p">;</span>
 
 
@@ -890,7 +888,7 @@ We can lock main capacitor controller to portrait from plugin (but application w
 <div class="tabbed-set" data-tabs="8:3"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><label for="__tabbed_8_1">Android</label><div class="tabbed-content">
 <p>To run the example project, clone the <a href="https://github.com/antourage/AntViewer-android">Antourage repo</a>, open project in Android Studio and run app module.</p>
 </div>
-<input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><label for="__tabbed_8_2">React native</label><div class="tabbed-content">
+<input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><label for="__tabbed_8_2">React Native</label><div class="tabbed-content">
 <p>To run the example project, clone the <a href="https://github.com/antourage/widget.react_native">Antourage repo</a> first.<br />
 Run <code>yarn bootstrap</code> in the root directory to install the required dependencies for each package.
 While developing, you can run the example app for testing needs.<br />
