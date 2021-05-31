@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.4">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.6">
     
     
       
@@ -18,10 +18,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.bde7dde4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.875de78c.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
         
       
     
@@ -579,7 +579,7 @@ pod install
 <input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><label for="__tabbed_2_4">Capacitor(Ionic)</label><div class="tabbed-content">
 <p>Antourage SDK is installed with <a href="https://www.npmjs.com/">npm (Node Package Manager)</a>. To install the SDK go through steps below:<br />
 <strong>Step 1</strong><br />
-<div class="highlight"><pre><span></span><code>npm i antourage_capacitor --save
+<div class="highlight"><pre><span></span><code>npm i antourage-capacitor --save
 </code></pre></div>
 <strong>Step 2</strong><br />
 <div class="highlight"><pre><span></span><code>npx cap sync
@@ -591,8 +591,8 @@ pod install
 <img src="../img/screenshots/android2.png" alt="Screenshots" width="100%" /></p>
 </li>
 <li>
-<p>You should create variable <code>private AntViewerPlugin antPlugin;</code>, add <code>import com.antourage.plugin.AntViewerPlugin;</code> , <code>add(AntViewerPlugin.class);</code> and initialize antPlugin with <code>antPlugin = (AntViewerPlugin) getBridge().getPlugin(AntViewerPlugin.class.getSimpleName()).getInstance();</code> in MainActivity class.
-Also you need to add <code>antPlugin.onPause();</code> and <code>antPlugin.onResume();</code> to overriden <code>onPause</code> and <code>onResume</code> methods accordingly, as you see below:
+<p>You should create variable <code>private AntourageCapacitor antouragePlugin;</code>, add <code>import com.antourage.plugin.AntourageCapacitor;</code> , <code>add(AntourageCapacitor.class);</code> and initialize antouragePlugin with <code>antouragePlugin = (AntourageCapacitor) getBridge().getPlugin(AntourageCapacitor.class.getAnnotation(NativePlugin.class).name()).getInstance();</code> in MainActivity class.
+Also you need to add <code>antouragePlugin.onPause();</code> and <code>antouragePlugin.onResume();</code> to overriden <code>onPause</code> and <code>onResume</code> methods accordingly, as you see below:
 <img src="../img/screenshots/android1.png" alt="Screenshots" width="100%" /></p>
 </li>
 <li>
@@ -636,7 +636,7 @@ The file contains a data for authorization (app client ids, redirect urls, etc.)
 </code></pre></div></p>
 </div>
 <input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><label for="__tabbed_4_3">React native</label><div class="tabbed-content">
-<p>You should to try call this method once per app lifecycle.
+<p>You should try to call this method once per app lifecycle.
 <div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Antourage</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">&#39;react-native-antourage&#39;</span><span class="p">;</span>
 
 <span class="c1">// ...</span>
@@ -647,15 +647,11 @@ The file contains a data for authorization (app client ids, redirect urls, etc.)
 </code></pre></div></p>
 </div>
 <input id="__tabbed_4_4" name="__tabbed_4" type="radio" /><label for="__tabbed_4_4">Capacitor(Ionic)</label><div class="tabbed-content">
-<p>You should to try call this method once per app lifecycle.
+<p>You should try to call this method once per app lifecycle.
 <div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Plugins</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">&#39;@capacitor/core&#39;</span><span class="p">;</span>
-<span class="kd">const</span> <span class="p">{</span> <span class="nx">AntViewerPlugin</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">Plugins</span><span class="p">;</span>
+<span class="kd">const</span> <span class="p">{</span> <span class="nx">Antourage</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">Plugins</span><span class="p">;</span>
 
-<span class="nx">AntViewerPlugin</span><span class="p">.</span><span class="nx">auth</span><span class="p">({</span>
-        <span class="nx">apiKey</span><span class="o">:</span> <span class="s2">&quot;put_your_apiKey_there&quot;</span><span class="p">,</span>
-        <span class="nx">refUserId</span><span class="o">:</span> <span class="s2">&quot;put_user_id_from_your_base_or_null&quot;</span><span class="p">,</span>
-        <span class="nx">nickname</span><span class="o">:</span> <span class="s2">&quot;put_user_nickname_from_your_base_or_null&quot;</span>
-<span class="p">})</span>
+<span class="nx">Antourage</span><span class="p">.</span><span class="nx">configure</span><span class="p">();</span>
 </code></pre></div></p>
 </div>
 </div>
@@ -723,11 +719,11 @@ Also override onResume and onPause in activity that contains widget:
 <input id="__tabbed_5_4" name="__tabbed_5" type="radio" /><label for="__tabbed_5_4">Capacitor(Ionic)</label><div class="tabbed-content">
 <p>Antourage widget works as overlay over Capacitor web view. You can show and hide it whenever you want (navigation handlers or component lifecycle etc).</p>
 <div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Plugins</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">&#39;@capacitor/core&#39;</span><span class="p">;</span>
-<span class="kd">const</span> <span class="p">{</span> <span class="nx">AntViewerPlugin</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">Plugins</span><span class="p">;</span>
+<span class="kd">const</span> <span class="p">{</span> <span class="nx">Antourage</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">Plugins</span><span class="p">;</span>
 
-<span class="nx">AntViewerPlugin</span><span class="p">.</span><span class="nx">showWidget</span><span class="p">();</span>
+<span class="nx">Antourage</span><span class="p">.</span><span class="nx">showWidget</span><span class="p">();</span>
 
-<span class="nx">AntViewerPlugin</span><span class="p">.</span><span class="nx">hideWidget</span><span class="p">();</span>
+<span class="nx">Antourage</span><span class="p">.</span><span class="nx">hideWidget</span><span class="p">();</span>
 </code></pre></div>
 </div>
 <input id="__tabbed_5_5" name="__tabbed_5" type="radio" /><label for="__tabbed_5_5">JavaScript</label><div class="tabbed-content">
@@ -795,15 +791,15 @@ The script will inject all other necessary elements. The actual widget operates 
 </div>
 <input id="__tabbed_6_4" name="__tabbed_6" type="radio" /><label for="__tabbed_6_4">Capacitor(Ionic)</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Plugins</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">&#39;@capacitor/core&#39;</span><span class="p">;</span>
-<span class="kd">const</span> <span class="p">{</span> <span class="nx">AntViewerPlugin</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">Plugins</span><span class="p">;</span>
+<span class="kd">const</span> <span class="p">{</span> <span class="nx">Antourage</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">Plugins</span><span class="p">;</span>
 
-<span class="nx">AntViewerPlugin</span><span class="p">.</span><span class="nx">setPosition</span><span class="p">({</span> <span class="nx">platform</span><span class="o">:</span> <span class="s2">&quot;ios&quot;</span><span class="p">,</span> <span class="nx">position</span><span class="o">:</span> <span class="s2">&quot;bottomLeft&quot;</span> <span class="p">});</span> <span class="c1">// iOS only</span>
-<span class="nx">AntViewerPlugin</span><span class="p">.</span><span class="nx">setPosition</span><span class="p">({</span> <span class="nx">platform</span><span class="o">:</span> <span class="s2">&quot;android&quot;</span><span class="p">,</span> <span class="nx">position</span><span class="o">:</span> <span class="s2">&quot;bottomLeft&quot;</span> <span class="p">});</span> <span class="c1">// android only</span>
-<span class="nx">AntViewerPlugin</span><span class="p">.</span><span class="nx">setPosition</span><span class="p">({</span> <span class="nx">position</span><span class="o">:</span> <span class="s2">&quot;bottomLeft&quot;</span> <span class="p">});</span> <span class="c1">// both</span>
+<span class="nx">Antourage</span><span class="p">.</span><span class="nx">setPosition</span><span class="p">({</span> <span class="nx">platform</span><span class="o">:</span> <span class="s2">&quot;ios&quot;</span><span class="p">,</span> <span class="nx">position</span><span class="o">:</span> <span class="s2">&quot;bottomLeft&quot;</span> <span class="p">});</span> <span class="c1">// iOS only</span>
+<span class="nx">Antourage</span><span class="p">.</span><span class="nx">setPosition</span><span class="p">({</span> <span class="nx">platform</span><span class="o">:</span> <span class="s2">&quot;android&quot;</span><span class="p">,</span> <span class="nx">position</span><span class="o">:</span> <span class="s2">&quot;bottomLeft&quot;</span> <span class="p">});</span> <span class="c1">// android only</span>
+<span class="nx">Antourage</span><span class="p">.</span><span class="nx">setPosition</span><span class="p">({</span> <span class="nx">position</span><span class="o">:</span> <span class="s2">&quot;bottomLeft&quot;</span> <span class="p">});</span> <span class="c1">// both</span>
 
-<span class="nx">AntViewerPlugin</span><span class="p">.</span><span class="nx">setMargins</span><span class="p">({</span><span class="nx">platform</span><span class="o">:</span> <span class="s2">&quot;ios&quot;</span><span class="p">,</span> <span class="nx">horizontal</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span> <span class="nx">vertical</span><span class="o">:</span> <span class="mf">30</span> <span class="p">});</span> <span class="c1">// iOS only</span>
-<span class="nx">AntViewerPlugin</span><span class="p">.</span><span class="nx">setMargins</span><span class="p">({</span><span class="nx">platform</span><span class="o">:</span> <span class="s2">&quot;android&quot;</span><span class="p">,</span> <span class="nx">horizontal</span><span class="o">:</span> <span class="mf">10</span><span class="p">,</span> <span class="nx">vertical</span><span class="o">:</span> <span class="mf">50</span> <span class="p">});</span> <span class="c1">// android only</span>
-<span class="nx">AntViewerPlugin</span><span class="p">.</span><span class="nx">setMargins</span><span class="p">({</span><span class="nx">horizontal</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span> <span class="nx">vertical</span><span class="o">:</span> <span class="mf">30</span> <span class="p">});</span> <span class="c1">// both</span>
+<span class="nx">Antourage</span><span class="p">.</span><span class="nx">setMargins</span><span class="p">({</span><span class="nx">platform</span><span class="o">:</span> <span class="s2">&quot;ios&quot;</span><span class="p">,</span> <span class="nx">horizontal</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span> <span class="nx">vertical</span><span class="o">:</span> <span class="mf">30</span> <span class="p">});</span> <span class="c1">// iOS only</span>
+<span class="nx">Antourage</span><span class="p">.</span><span class="nx">setMargins</span><span class="p">({</span><span class="nx">platform</span><span class="o">:</span> <span class="s2">&quot;android&quot;</span><span class="p">,</span> <span class="nx">horizontal</span><span class="o">:</span> <span class="mf">10</span><span class="p">,</span> <span class="nx">vertical</span><span class="o">:</span> <span class="mf">50</span> <span class="p">});</span> <span class="c1">// android only</span>
+<span class="nx">Antourage</span><span class="p">.</span><span class="nx">setMargins</span><span class="p">({</span><span class="nx">horizontal</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span> <span class="nx">vertical</span><span class="o">:</span> <span class="mf">30</span> <span class="p">});</span> <span class="c1">// both</span>
 </code></pre></div>
 </div>
 </div>
@@ -868,14 +864,14 @@ Just add two listeners to handle widget state:
 You can use <code>cordova-plugin-screen-orientation</code> to be able to lock orientations occasionally depending on the content.</p>
 <p>Just add two listeners to handle widget state:
 <div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Plugins</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">&#39;@capacitor/core&#39;</span><span class="p">;</span>
-<span class="kd">const</span> <span class="p">{</span> <span class="nx">AntViewerPlugin</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">Plugins</span><span class="p">;</span>
+<span class="kd">const</span> <span class="p">{</span> <span class="nx">Antourage</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">Plugins</span><span class="p">;</span>
 
-<span class="nx">AntViewerPlugin</span><span class="p">.</span><span class="nx">addListener</span><span class="p">(</span><span class="s1">&#39;onViewerAppear&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">info</span><span class="o">:</span> <span class="nx">any</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<span class="nx">Antourage</span><span class="p">.</span><span class="nx">addListener</span><span class="p">(</span><span class="s1">&#39;onViewerAppear&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">info</span><span class="o">:</span> <span class="nx">any</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;viewer did appear&#39;</span><span class="p">);</span>
 <span class="c1">// window.screen.orientation.unlock();</span>
 <span class="p">});</span>
 
-<span class="nx">AntViewerPlugin</span><span class="p">.</span><span class="nx">addListener</span><span class="p">(</span><span class="s1">&#39;onViewerDisappear&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">info</span><span class="o">:</span> <span class="nx">any</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<span class="nx">Antourage</span><span class="p">.</span><span class="nx">addListener</span><span class="p">(</span><span class="s1">&#39;onViewerDisappear&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">info</span><span class="o">:</span> <span class="nx">any</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;viewer did disappear&#39;</span><span class="p">);</span>
 <span class="c1">//window.screen.orientation.lock(&#39;portrait&#39;);</span>
 <span class="p">});</span>
@@ -884,9 +880,9 @@ Second approach (a bit easier):
 We can lock main capacitor controller to portrait from plugin (but application will support lanscape). It means that your ionic UI that runs in webView will be in portrait only, but everthing outside capacitor controller (Antrourage screens, or some native modals etc) will be able to use landscape.</p>
 <p>You just need to call this function after your app starts:
 <div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Plugins</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">&#39;@capacitor/core&#39;</span><span class="p">;</span>
-<span class="kd">const</span> <span class="p">{</span> <span class="nx">AntViewerPlugin</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">Plugins</span><span class="p">;</span>
+<span class="kd">const</span> <span class="p">{</span> <span class="nx">Antourage</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">Plugins</span><span class="p">;</span>
 
-<span class="nx">AntViewerPlugin</span><span class="p">.</span><span class="nx">lockCapacitorControllerToPortrait</span><span class="p">();</span>
+<span class="nx">Antourage</span><span class="p">.</span><span class="nx">lockCapacitorControllerToPortrait</span><span class="p">();</span>
 </code></pre></div></p>
 </div>
 </div>
@@ -909,7 +905,7 @@ To run the example app on iOS:
 </code></pre></div></p>
 </div>
 <input id="__tabbed_8_3" name="__tabbed_8" type="radio" /><label for="__tabbed_8_3">Capacitor(Ionic)</label><div class="tabbed-content">
-<p>To run the example project, clone the <a href="https://github.com/antourage/AntViewer_capacitor">Antourage repo</a> first.
+<p>To run the example project, clone the <a href="https://github.com/antourage/viewer-sdk-capacitor">Antourage repo</a> first.
 And run code below from the example directory:
 <div class="highlight"><pre><span></span><code>npm i
 npx cap sync
@@ -985,10 +981,10 @@ ionic capacitor run ios --livereload --external
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.4fa0e4ee.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.d351de03.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.1d3bfcf1.min.js"></script>
+      <script src="../assets/javascripts/bundle.34eae1b6.min.js"></script>
       
     
   </body>
