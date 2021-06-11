@@ -9,8 +9,8 @@
       
       
       
-      <link rel="icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.6">
+      <link rel="icon" href="img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.7">
     
     
       
@@ -18,10 +18,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.875de78c.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.ca7ac06f.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
+        <link rel="stylesheet" href="assets/stylesheets/palette.f1a3b89f.min.css">
         
       
     
@@ -36,7 +36,7 @@
     
     
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="stylesheets/extra.css">
     
     
       
@@ -53,7 +53,7 @@
     <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent="">
   
     
-    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL(".",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -72,9 +72,9 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Antourage" class="md-header__button md-logo" aria-label="Antourage" data-md-component="logo">
+    <a href="index.html" title="Antourage" class="md-header__button md-logo" aria-label="Antourage" data-md-component="logo">
       
-  <img src="../img/favicon.ico" alt="logo">
+  <img src="img/favicon.ico" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -151,9 +151,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Antourage" class="md-nav__button md-logo" aria-label="Antourage" data-md-component="logo">
+    <a href="index.html" title="Antourage" class="md-nav__button md-logo" aria-label="Antourage" data-md-component="logo">
       
-  <img src="../img/favicon.ico" alt="logo">
+  <img src="img/favicon.ico" alt="logo">
 
     </a>
     Antourage
@@ -169,7 +169,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="index.html" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -198,7 +198,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="./" class="md-nav__link md-nav__link--active">
+      <a href="widget.html" class="md-nav__link md-nav__link--active">
         Get Started
       </a>
       
@@ -257,19 +257,6 @@
     Add UI part
   </a>
   
-    <nav class="md-nav" aria-label="Add UI part">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#widget-position-and-margins" class="md-nav__link">
-    Widget position and margins
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -307,7 +294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../push/" class="md-nav__link">
+      <a href="push.html" class="md-nav__link">
         Push notfications
       </a>
     </li>
@@ -322,7 +309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../localization/" class="md-nav__link">
+      <a href="localization.html" class="md-nav__link">
         Localization
       </a>
     </li>
@@ -394,19 +381,6 @@
   <a href="#add-ui-part" class="md-nav__link">
     Add UI part
   </a>
-  
-    <nav class="md-nav" aria-label="Add UI part">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#widget-position-and-margins" class="md-nav__link">
-    Widget position and margins
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -654,7 +628,7 @@ The file contains a data for authorization (app client ids, redirect urls, etc.)
 </div>
 </div>
 <h3 id="add-ui-part">Add UI part</h3>
-<p>The main feature of Antourage SDK is a widget - a simple button that should be placed on your screen. You can set a predefined position and extra margins for it. The widget will fully work only after successful authorization.<br />
+<p>The main feature of Antourage SDK is the widget — a simple button that should be placed on your screen. The widget will fully work only after successful configuration.<br />
 If you need to know when the Feed screen appears and disappears you can use callbacks.</p>
 <div class="tabbed-set" data-tabs="5:5"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">iOS</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="kd">import</span> <span class="nc">Antourage</span>
@@ -738,69 +712,6 @@ The script will inject all other necessary elements. The actual widget operates 
 </ul>
 </div>
 </div>
-<h4 id="widget-position-and-margins">Widget position and margins</h4>
-<p>You can set any position from the list:</p>
-<ul>
-<li>topLeft</li>
-<li>midLeft</li>
-<li>
-<p>bottomLeft</p>
-</li>
-<li>
-<p>topMid</p>
-</li>
-<li>
-<p>bottomMid</p>
-</li>
-<li>
-<p>topRight</p>
-</li>
-<li>midRight</li>
-<li>bottomRight</li>
-</ul>
-<div class="tabbed-set" data-tabs="6:4"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><label for="__tabbed_6_1">iOS</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="kd">import</span> <span class="nc">Antourage</span>
-
-<span class="c1">// ...</span>
-<span class="n">Antourage</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="n">widgetPosition</span> <span class="p">=</span> <span class="p">.</span><span class="n">bottomRight</span>
-<span class="n">Antourage</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="n">widgetMargins</span> <span class="p">=</span> <span class="n">WidgetMargins</span><span class="p">(</span><span class="n">vertical</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="n">horizontal</span><span class="p">:</span> <span class="mi">20</span><span class="p">)</span>
-<span class="c1">// ...</span>
-</code></pre></div>
-</div>
-<input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><label for="__tabbed_6_2">Android</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="c1">// ...</span>
-<span class="n">antfab</span><span class="p">.</span><span class="na">setPosition</span><span class="p">(</span><span class="n">WidgetPosition</span><span class="p">.</span><span class="na">bottomRight</span><span class="p">)</span>
-<span class="n">antfab</span><span class="p">.</span><span class="na">setMargins</span><span class="p">(</span><span class="n">horizontal</span> <span class="o">=</span> <span class="m">10</span><span class="p">,</span> <span class="n">vertical</span> <span class="o">=</span> <span class="m">80</span><span class="p">)</span>
-<span class="c1">// ...</span>
-</code></pre></div>
-</div>
-<input id="__tabbed_6_3" name="__tabbed_6" type="radio" /><label for="__tabbed_6_3">React Native</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="nx">AntourageView</span> <span class="k">from</span> <span class="s1">&#39;antourage-react-native&#39;</span><span class="p">;</span>
-
-<span class="c1">// ...</span>
-
-<span class="o">&lt;</span><span class="nx">AntourageView</span>
-<span class="nx">widgetPosition</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;bottomRight&#39;</span><span class="p">}</span>
-<span class="nx">widgetMargins</span><span class="o">=</span><span class="p">{{</span> <span class="nx">vertical</span><span class="o">:</span> <span class="mf">50</span><span class="p">,</span> <span class="nx">horizontal</span><span class="o">:</span> <span class="mf">20</span> <span class="p">}}</span>
-<span class="err">/&gt;</span>
-
-<span class="c1">// ...</span>
-</code></pre></div>
-</div>
-<input id="__tabbed_6_4" name="__tabbed_6" type="radio" /><label for="__tabbed_6_4">Capacitor (Ionic)</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Plugins</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">&#39;@capacitor/core&#39;</span><span class="p">;</span>
-<span class="kd">const</span> <span class="p">{</span> <span class="nx">Antourage</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">Plugins</span><span class="p">;</span>
-
-<span class="nx">Antourage</span><span class="p">.</span><span class="nx">setPosition</span><span class="p">({</span> <span class="nx">platform</span><span class="o">:</span> <span class="s2">&quot;ios&quot;</span><span class="p">,</span> <span class="nx">position</span><span class="o">:</span> <span class="s2">&quot;bottomLeft&quot;</span> <span class="p">});</span> <span class="c1">// iOS only</span>
-<span class="nx">Antourage</span><span class="p">.</span><span class="nx">setPosition</span><span class="p">({</span> <span class="nx">platform</span><span class="o">:</span> <span class="s2">&quot;android&quot;</span><span class="p">,</span> <span class="nx">position</span><span class="o">:</span> <span class="s2">&quot;bottomLeft&quot;</span> <span class="p">});</span> <span class="c1">// android only</span>
-<span class="nx">Antourage</span><span class="p">.</span><span class="nx">setPosition</span><span class="p">({</span> <span class="nx">position</span><span class="o">:</span> <span class="s2">&quot;bottomLeft&quot;</span> <span class="p">});</span> <span class="c1">// both</span>
-
-<span class="nx">Antourage</span><span class="p">.</span><span class="nx">setMargins</span><span class="p">({</span><span class="nx">platform</span><span class="o">:</span> <span class="s2">&quot;ios&quot;</span><span class="p">,</span> <span class="nx">horizontal</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span> <span class="nx">vertical</span><span class="o">:</span> <span class="mf">30</span> <span class="p">});</span> <span class="c1">// iOS only</span>
-<span class="nx">Antourage</span><span class="p">.</span><span class="nx">setMargins</span><span class="p">({</span><span class="nx">platform</span><span class="o">:</span> <span class="s2">&quot;android&quot;</span><span class="p">,</span> <span class="nx">horizontal</span><span class="o">:</span> <span class="mf">10</span><span class="p">,</span> <span class="nx">vertical</span><span class="o">:</span> <span class="mf">50</span> <span class="p">});</span> <span class="c1">// android only</span>
-<span class="nx">Antourage</span><span class="p">.</span><span class="nx">setMargins</span><span class="p">({</span><span class="nx">horizontal</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span> <span class="nx">vertical</span><span class="o">:</span> <span class="mf">30</span> <span class="p">});</span> <span class="c1">// both</span>
-</code></pre></div>
-</div>
-</div>
 <table>
 <thead>
 <tr>
@@ -820,30 +731,20 @@ The script will inject all other necessary elements. The actual widget operates 
 <td>Closure</td>
 <td>Called when the user dismisses the widget controller.</td>
 </tr>
-<tr>
-<td>widgetPosition</td>
-<td>Enum</td>
-<td>You can set any widget position from enum</td>
-</tr>
-<tr>
-<td>widgetMargins</td>
-<td>Struct</td>
-<td>You can set custom horizontal and vertical margin for each position. But some positions may ignore it. Max vertical - 220, max horizontal - 50.</td>
-</tr>
 </tbody>
 </table>
 <h3 id="orientation-ios-only">Orientation (iOS only)</h3>
 <p>Your app may support only portrait orientation, but our widget should be able to use landscape orientation while playing video.</p>
 <p>First of all you should enable ladnscape orientation in xcode project.
 <img src="../img/screenshots/orientation.png" alt="Screenshots" width="100%" /></p>
-<div class="tabbed-set" data-tabs="7:3"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><label for="__tabbed_7_1">iOS</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="6:3"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><label for="__tabbed_6_1">iOS</label><div class="tabbed-content">
 <p>You can lock orientation for specific controllers by adding code below to them: 
 <div class="highlight"><pre><span></span><code><span class="kr">override</span> <span class="kd">var</span> <span class="nv">supportedInterfaceOrientations</span><span class="p">:</span> <span class="n">UIInterfaceOrientationMask</span> <span class="p">{</span>
     <span class="k">return</span> <span class="p">[.</span><span class="n">portrait</span><span class="p">]</span>
 <span class="p">}</span>
 </code></pre></div></p>
 </div>
-<input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><label for="__tabbed_7_2">React Native</label><div class="tabbed-content">
+<input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><label for="__tabbed_6_2">React Native</label><div class="tabbed-content">
 <p>You can use some third-party library (<a href="https://github.com/wonday/react-native-orientation-locker">react-native-orientation-locker</a>) to be able to lock orientations occasionally depending on the content.
 Just add two listeners to handle widget state:
 <div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="nx">AntourageView</span> <span class="k">from</span> <span class="s1">&#39;antourage-react-native&#39;</span><span class="p">;</span>
@@ -857,7 +758,7 @@ Just add two listeners to handle widget state:
 <span class="err">/&gt;</span>
 </code></pre></div></p>
 </div>
-<input id="__tabbed_7_3" name="__tabbed_7" type="radio" /><label for="__tabbed_7_3">Capacitor (Ionic)</label><div class="tabbed-content">
+<input id="__tabbed_6_3" name="__tabbed_6" type="radio" /><label for="__tabbed_6_3">Capacitor (Ionic)</label><div class="tabbed-content">
 <p>First approach:
 You can use <code>cordova-plugin-screen-orientation</code> to be able to lock orientations occasionally depending on the content.</p>
 <p>Just add two listeners to handle widget state:
@@ -885,10 +786,10 @@ We can lock main capacitor controller to portrait from plugin (but application w
 </div>
 </div>
 <h2 id="examples">Examples</h2>
-<div class="tabbed-set" data-tabs="8:3"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><label for="__tabbed_8_1">Android</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="7:3"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><label for="__tabbed_7_1">Android</label><div class="tabbed-content">
 <p>To run the example project, clone the <a href="https://github.com/antourage/AntViewer-android">Antourage repo</a>, open project in Android Studio and run app module.</p>
 </div>
-<input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><label for="__tabbed_8_2">React Native</label><div class="tabbed-content">
+<input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><label for="__tabbed_7_2">React Native</label><div class="tabbed-content">
 <p>To run the example project, clone the <a href="https://github.com/antourage/widget.react_native">Antourage repo</a> first.<br />
 Run <code>yarn bootstrap</code> in the root directory to install the required dependencies for each package.
 While developing, you can run the example app for testing needs.<br />
@@ -902,7 +803,7 @@ To run the example app on iOS:
 <div class="highlight"><pre><span></span><code>yarn example ios
 </code></pre></div></p>
 </div>
-<input id="__tabbed_8_3" name="__tabbed_8" type="radio" /><label for="__tabbed_8_3">Capacitor (Ionic)</label><div class="tabbed-content">
+<input id="__tabbed_7_3" name="__tabbed_7" type="radio" /><label for="__tabbed_7_3">Capacitor (Ionic)</label><div class="tabbed-content">
 <p>To run the example project, clone the <a href="https://github.com/antourage/viewer-sdk-capacitor">Antourage repo</a> first.
 And run code below from the example directory:
 <div class="highlight"><pre><span></span><code>npm i
@@ -929,7 +830,8 @@ ionic capacitor run ios --livereload --external
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href=".." class="md-footer__link md-footer__link--prev" rel="prev">
+        
+        <a href="index.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overview" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -944,7 +846,8 @@ ionic capacitor run ios --livereload --external
         </a>
       
       
-        <a href="../push/" class="md-footer__link md-footer__link--next" rel="next">
+        
+        <a href="push.html" class="md-footer__link md-footer__link--next" aria-label="Next: Push notfications" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
@@ -979,10 +882,10 @@ ionic capacitor run ios --livereload --external
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.d351de03.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": ".", "features": ["header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.34eae1b6.min.js"></script>
+      <script src="assets/javascripts/bundle.76f349be.min.js"></script>
       
     
   </body>
