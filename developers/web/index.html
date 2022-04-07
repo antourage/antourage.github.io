@@ -440,28 +440,31 @@
 <h2 id="install">Install</h2>
 <p>The following code should be added to a web-site:</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-  <span class="kd">var</span> <span class="nx">PARTNER_ID</span> <span class="o">=</span> <span class="s1">&#39;PARTNER_ID&#39;</span><span class="p">;</span> <span class="c1">// The &#39;id&#39; of the partner team for the widget to get the content for.</span>
-  <span class="kd">var</span> <span class="nx">COLOR_WIDGET_BORDER</span> <span class="o">=</span> <span class="s1">&#39;#000000&#39;</span><span class="p">;</span> <span class="c1">// The backeground color for the widget itself.</span>
-  <span class="kd">var</span> <span class="nx">COLOR_WIDGET_PING_BORDER</span><span class="o">:</span> <span class="s1">&#39;#000000&#39;</span><span class="p">;</span>
-  <span class="kd">var</span> <span class="nx">COLOR_CTA_BG</span><span class="o">:</span> <span class="s1">&#39;#000000&#39;</span><span class="p">;</span> <span class="c1">// The background color for the call to action button on the widget</span>
-  <span class="kd">var</span> <span class="nx">COLOR_CTA_TEXT</span><span class="o">:</span> <span class="s1">&#39;#000000&#39;</span><span class="p">;</span> <span class="c1">// Tthe font color for the call to action button on the widget</span>
-  <span class="kd">var</span> <span class="nx">COLOR_LIVE</span><span class="o">:</span> <span class="s1">&#39;#000000&#39;</span><span class="p">;</span> <span class="c1">// The live label color.</span>
-  <span class="kd">var</span> <span class="nx">COLOR_TITLE_BG</span><span class="o">:</span> <span class="s1">&#39;#000000&#39;</span><span class="p">;</span> <span class="c1">// The content title label background color.</span>
-  <span class="kd">var</span> <span class="nx">COLOR_TITLE_TEXT</span><span class="o">:</span> <span class="s1">&#39;#000000&#39;</span><span class="p">;</span> <span class="c1">// The content title label font color.</span>
-  <span class="kd">var</span> <span class="nx">COLOR_NAME_BG</span><span class="o">:</span> <span class="s1">&#39;#000000&#39;</span><span class="p">;</span> <span class="c1">// The content creator or show name label background color.</span>
-  <span class="kd">var</span> <span class="nx">COLOR_NAME_TEXT</span><span class="o">:</span> <span class="s1">&#39;#000000&#39;</span><span class="p">;</span> <span class="c1">// The content creator or show name label font color.</span>
+  <span class="c1">// NOTE: Parameter below is REQUIRED. This has to be requested from Antourage team and specified.</span>
+  <span class="kd">var</span> <span class="nx">PARTNER_ID</span> <span class="o">=</span> <span class="s1">&#39;PARTNER_ID&#39;</span><span class="p">;</span>
+
+  <span class="c1">// NOTE: Parameters below are purely OPTIONAL. If not specified, default colors will be used. The color should be specified in &#39;#000000&#39; format (HEX).</span>
+  <span class="c1">// var COLOR_WIDGET_BORDER = &#39;#000000&#39;;</span>
+  <span class="c1">// var COLOR_WIDGET_PING_BORDER: &#39;#000000&#39;;</span>
+  <span class="c1">// var COLOR_CTA_BG = &#39;#000000&#39;;</span>
+  <span class="c1">// var COLOR_CTA_TEXT = &#39;#000000&#39;;</span>
+  <span class="c1">// var COLOR_LIVE = &#39;#000000&#39;;</span>
+  <span class="c1">// var COLOR_TITLE_BG = &#39;#000000&#39;;</span>
+  <span class="c1">// var COLOR_TITLE_TEXT = &#39;#000000&#39;;</span>
+  <span class="c1">// var COLOR_NAME_BG = &#39;#000000&#39;;</span>
+  <span class="c1">// var COLOR_NAME_TEXT = &#39;#000000&#39;;</span>
 
   <span class="nb">window</span><span class="p">.</span><span class="nx">_ANTOURAGE_CONFIG</span> <span class="o">=</span> <span class="p">{</span>
     <span class="nx">partner_id</span><span class="o">:</span> <span class="nx">PARTNER_ID</span><span class="p">,</span>
-    <span class="nx">color_widget_border</span><span class="o">:</span> <span class="nx">COLOR_WIDGET_BORDER</span><span class="p">,</span>
-    <span class="nx">color_widget_ping_border</span><span class="o">:</span> <span class="nx">COLOR_WIDGET_PING_BORDER</span><span class="p">,</span>
-    <span class="nx">color_cta_bg</span><span class="o">:</span> <span class="nx">COLOR_CTA_BG</span><span class="p">,</span>
-    <span class="nx">color_cta_text</span><span class="o">:</span> <span class="nx">COLOR_CTA_TEXT</span><span class="p">,</span>
-    <span class="nx">color_live</span><span class="o">:</span> <span class="nx">COLOR_LIVE</span><span class="p">,</span>
-    <span class="nx">color_title_bg</span><span class="o">:</span> <span class="nx">COLOR_TITLE_BG</span><span class="p">,</span>
-    <span class="nx">color_title_text</span><span class="o">:</span> <span class="nx">COLOR_TITLE_TEXT</span><span class="p">,</span>
-    <span class="nx">color_name_bg</span><span class="o">:</span> <span class="nx">COLOR_NAME_BG</span><span class="p">,</span>
-    <span class="nx">color_name_text</span><span class="o">:</span> <span class="nx">COLOR_NAME_TEXT</span>
+    <span class="c1">// color_widget_border: COLOR_WIDGET_BORDER,</span>
+    <span class="c1">// color_widget_ping_border: COLOR_WIDGET_PING_BORDER,</span>
+    <span class="c1">// color_cta_bg: COLOR_CTA_BG,</span>
+    <span class="c1">// color_cta_text: COLOR_CTA_TEXT,</span>
+    <span class="c1">// color_live: COLOR_LIVE,</span>
+    <span class="c1">// color_title_bg: COLOR_TITLE_BG,</span>
+    <span class="c1">// color_title_text: COLOR_TITLE_TEXT,</span>
+    <span class="c1">// color_name_bg: COLOR_NAME_BG,</span>
+    <span class="c1">// color_name_text: COLOR_NAME_TEXT</span>
   <span class="p">};</span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
@@ -495,9 +498,6 @@ The script will inject all other necessary elements.</p>
 <li><code>COLOR_NAME_BG</code> -  The color used in the background of the content creator or show name label.</li>
 <li><code>COLOR_NAME_TEXT</code> - The color of the font used inside the content creator or show name label.</li>
 </ul>
-<blockquote>
-<p>NOTE: The color should be specified in '#000000' format (HEX).</p>
-</blockquote>
 
               
             </article>
