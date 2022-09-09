@@ -9,19 +9,20 @@
       
       
       <link rel="icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.3">
     
     
       
-        <title>Get Started with Antourage Viewer Capacitor SDK - Antourage</title>
+        <title>Ionic (Capacitor) - Antourage</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.120efc48.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6b80c2a2.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.9647289d.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
         
+      
       
     
     
@@ -37,7 +38,7 @@
     
       <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -95,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Get Started with Antourage Viewer Capacitor SDK
+              Ionic (Capacitor)
             
           </span>
         </div>
@@ -161,13 +162,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../web/" class="md-tabs__link">
+      <a href="../web/" class="md-tabs__link md-tabs__link--active">
         Developers
       </a>
     </li>
@@ -250,12 +253,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -290,11 +295,209 @@
               
   
   
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          Mobile
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mobile" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Mobile
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
   
     <li class="md-nav__item">
-      <a href="../push-notifications/" class="md-nav__link">
-        Push Notfications
+      <a href="../ios/" class="md-nav__link">
+        iOS
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../android/" class="md-nav__link">
+        Android
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Ionic (Capacitor)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Ionic (Capacitor)
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pre-requisites" class="md-nav__link">
+    Pre-requisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install" class="md-nav__link">
+    Install
+  </a>
+  
+    <nav class="md-nav" aria-label="Install">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initialization" class="md-nav__link">
+    Initialization
+  </a>
+  
+    <nav class="md-nav" aria-label="Initialization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-ui-part" class="md-nav__link">
+    Add UI part
+  </a>
+  
+    <nav class="md-nav" aria-label="Add UI part">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#widgets-properties" class="md-nav__link">
+    Widget's properties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#push-notifications" class="md-nav__link">
+    Push Notifications
+  </a>
+  
+    <nav class="md-nav" aria-label="Push Notifications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#subscription" class="md-nav__link">
+    Subscription
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sending-notifications" class="md-nav__link">
+    Sending notifications
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handling-notifications" class="md-nav__link">
+    Handling notifications
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -376,8 +579,7 @@
 <li>iOS:<ul>
 <li>Xcode 12.5 or later</li>
 <li>CocoaPods 1.10.0 or later</li>
-<li>Project must target iOS 11.3 or later</li>
-<li>Landscape orientation support</li>
+<li>Project must target iOS 13.0 or later</li>
 </ul>
 </li>
 <li>Android:<ul>
@@ -397,8 +599,8 @@ in your gradle.properties</li>
 </code></pre></div>
 <strong>Step 2</strong><br />
 <div class="highlight"><pre><span></span><code>npx cap sync
-</code></pre></div>
-<strong>Android Additional Configuration</strong></p>
+</code></pre></div></p>
+<p><strong>Android Additional Configuration</strong></p>
 <ol>
 <li>
 <p>You should find app build.gradle file and add  <code>maven { url 'https://jitpack.io' }</code> to the repositories block.
@@ -413,91 +615,68 @@ Also you need to add <code>antouragePlugin.onPause();</code> and <code>antourage
 <p><code>npx cap sync</code></p>
 </li>
 </ol>
-<h3 id="add-an-antourage-config-file">Add an Antourage config file</h3>
-<p>Please be sure that you already have the config file, otherwise please contact <a href="mailto:pavlo.hodysh@antourage.com">Antourage</a> to request one for your application.
-The file contains a data for authorization (app client ids, redirect urls, etc.)</p>
-<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">iOS</label><div class="tabbed-content">
-<p>Move your <em>Antourage-Info.plist</em> config file into your Xcode project. If prompted, select to add the config file to all targets.</p>
-</div>
-<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Android</label><div class="tabbed-content">
-<p>Move your <em>antourage_info.json</em> config file into your project's assets folder. If there's no assets folder in your project - simply create it at app/src/main/.</p>
-</div>
-</div>
 <h3 id="initialization">Initialization</h3>
-<p>You should try to call this method once per app lifecycle.
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Plugins</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@capacitor/core&#39;</span><span class="p">;</span>
-<span class="kd">const</span> <span class="p">{</span> <span class="nx">Antourage</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">Plugins</span><span class="p">;</span>
-
-<span class="nx">Antourage</span><span class="p">.</span><span class="nx">configure</span><span class="p">();</span>
+<ol>
+<li>
+<p>Import the Antourage module:
+<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Plugins</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@capacitor/core&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Antourage</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Plugins</span><span class="p">;</span><span class="w"></span>
 </code></pre></div></p>
+</li>
+<li>
+<p>Configure an Antourage shared instance. You should call this method once per app lifecycle:
+<div class="highlight"><pre><span></span><code><span class="nx">Antourage</span><span class="p">.</span><span class="nx">configure</span><span class="p">({</span><span class="w"> </span><span class="nx">teamId</span><span class="o">:</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">teamId</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="nx">localization</span><span class="o">:</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">localization</span><span class="o">&gt;</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
+</code></pre></div></p>
+</li>
+</ol>
+<h4 id="parameters">Parameters</h4>
+<ul>
+<li><code>teamId</code> - The 'ID' that has been assigned to the partner. This 'ID' can be requested from the Antourage partner's account manager.</li>
+<li><code>localization</code> - The preferred locale (e.g. "en-US") in which portal should be displayed. If not specified application locale will be used. If locale not supported English will be used. </li>
+</ul>
 <h3 id="add-ui-part">Add UI part</h3>
 <p>The main feature of Antourage SDK is the widget — a simple button that should be placed on your screen. The widget will fully work only after successful configuration.
 If you need to know when the Feed screen appears and disappears you can use callbacks.</p>
 <p>Antourage widget works as overlay over Capacitor web view. You can show and hide it whenever you want (navigation handlers or component lifecycle etc).</p>
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Plugins</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@capacitor/core&#39;</span><span class="p">;</span>
-<span class="kd">const</span> <span class="p">{</span> <span class="nx">Antourage</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">Plugins</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Plugins</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@capacitor/core&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Antourage</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Plugins</span><span class="p">;</span><span class="w"></span>
 
-<span class="nx">Antourage</span><span class="p">.</span><span class="nx">showWidget</span><span class="p">();</span>
+<span class="nx">Antourage</span><span class="p">.</span><span class="nx">showWidget</span><span class="p">();</span><span class="w"></span>
 
-<span class="nx">Antourage</span><span class="p">.</span><span class="nx">hideWidget</span><span class="p">();</span>
+<span class="nx">Antourage</span><span class="p">.</span><span class="nx">hideWidget</span><span class="p">();</span><span class="w"></span>
 </code></pre></div>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>onViewerAppear</td>
-<td>Closure</td>
-<td>Called when the user opens the widget controller.</td>
-</tr>
-<tr>
-<td>onViewerDisappear</td>
-<td>Closure</td>
-<td>Called when the user dismisses the widget controller.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="orientation-ios-only">Orientation (iOS only)</h3>
-<p>Your app may support only portrait orientation, but our widget should be able to use landscape orientation while playing video.</p>
-<p>First of all you should enable ladnscape orientation in xcode project.
-<img src="../../img/screenshots/orientation.png" alt="Screenshots" width="100%" /></p>
-<p>First approach:
-You can use <code>cordova-plugin-screen-orientation</code> to be able to lock orientations occasionally depending on the content.</p>
-<p>Just add two listeners to handle widget state:
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Plugins</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@capacitor/core&#39;</span><span class="p">;</span>
-<span class="kd">const</span> <span class="p">{</span> <span class="nx">Antourage</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">Plugins</span><span class="p">;</span>
-
-<span class="nx">Antourage</span><span class="p">.</span><span class="nx">addListener</span><span class="p">(</span><span class="s1">&#39;onViewerAppear&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">info</span><span class="o">:</span> <span class="nx">any</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-     <span class="nb">window</span><span class="p">.</span><span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">unlock</span><span class="p">();</span>
-<span class="p">});</span>
-
-<span class="nx">Antourage</span><span class="p">.</span><span class="nx">addListener</span><span class="p">(</span><span class="s1">&#39;onViewerDisappear&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">info</span><span class="o">:</span> <span class="nx">any</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="nb">window</span><span class="p">.</span><span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">lock</span><span class="p">(</span><span class="s1">&#39;portrait&#39;</span><span class="p">);</span>
-<span class="p">});</span>
+<h4 id="widgets-properties">Widget's properties</h4>
+<ul>
+<li><code>portalColor</code> - The color of the portal.</li>
+<li><code>nameTextColor</code> - The text color of the content creator or show name label.</li>
+<li><code>nameBackgroundColor</code> - The background color of the content creator or show name label.</li>
+<li><code>titleTextColor</code> - The text color of the stream name label.</li>
+<li><code>titleBackgroundColor</code> - The background color of the stream name label.</li>
+<li><code>ctaTextColor</code> -  The text color of the call to action button.</li>
+<li><code>ctaBackgroundColor</code> - The background color of the call to action button.</li>
+<li><code>liveDotColor</code> - The color of the pulsating dot, which is displayed when the content is live.</li>
+</ul>
+<h2 id="push-notifications">Push Notifications</h2>
+<h3 id="subscription">Subscription</h3>
+<p>Subscription and unsubscription is handled by our partners, not by the Antourage dev team.
+If any of our partners have push notification implemented in their system, they should provide us with the <code>POST</code> endpoint. Antourage backend services will send the following JSON payload to this endpoint:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;some title&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;body&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;some body&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;video_url&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;some url&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;source&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;antourage&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
-Second approach (a bit easier):
-We can lock main capacitor controller to portrait from plugin (but application will support lanscape). It means that your ionic UI that runs in webView will be in portrait only, but everthing outside capacitor controller (Antrourage screens, or some native modals etc) will be able to use landscape.</p>
-<p>You just need to call this function after your app starts:
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Plugins</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@capacitor/core&#39;</span><span class="p">;</span>
-<span class="kd">const</span> <span class="p">{</span> <span class="nx">Antourage</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">Plugins</span><span class="p">;</span>
+<h3 id="sending-notifications">Sending notifications</h3>
+<p>Antourage backend will sends POST request only if new content is available.
+Sending push notifications is handled by our partners infrastructure.</p>
+<h3 id="handling-notifications">Handling notifications</h3>
+<p>By tapping on a Push Notification from Antourage the application should open <code>video_url</code> in web browser:
+<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Plugins</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@capacitor/core&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Browser</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Plugins</span><span class="p">;</span><span class="w"></span>
 
-<span class="nx">Antourage</span><span class="p">.</span><span class="nx">lockCapacitorControllerToPortrait</span><span class="p">();</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">Browser</span><span class="p">.</span><span class="nx">open</span><span class="p">({</span><span class="w"> </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="nx">video_url</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
 </code></pre></div></p>
-<h3 id="localization">Localization</h3>
-<p>By default the Android widget will use the device language. On iOS we use the application language. English and Swedish languages are availabe.  If you want to force app to use language that differs from current one — you can use methods below:
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Plugins</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@capacitor/core&#39;</span><span class="p">;</span>
-<span class="kd">const</span> <span class="p">{</span> <span class="nx">Antourage</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">Plugins</span><span class="p">;</span>
-
-<span class="nx">Antourage</span><span class="p">.</span><span class="nx">setLocale</span><span class="p">({</span> <span class="nx">locale</span><span class="o">:</span> <span class="s2">&quot;en&quot;</span> <span class="p">});</span> <span class="c1">// or &quot;sv&quot;</span>
-</code></pre></div></p>
-<h2 id="parameters">Parameters</h2>
-<p>TBD: e.g. team_id</p>
-<p>Describe what parameters are there and where to get them</p>
 <h2 id="example">Example</h2>
 <p>To run the example project, clone the <a href="https://github.com/antourage/viewer-sdk-capacitor">Antourage repo</a> first.
 And run code below from the example directory:
@@ -506,14 +685,54 @@ npx cap sync
 ionic capacitor run ios --livereload --external
 </code></pre></div></p>
 
+
+
+
               
             </article>
+            
           </div>
         </div>
         
       </main>
       
         <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../android/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Android" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Android
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../faq/" class="md-footer__link md-footer__link--next" aria-label="Next: General" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              General
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -535,10 +754,11 @@ ionic capacitor run ios --livereload --external
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "toc.integrate", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "toc.integrate", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.6e54b5cd.min.js"></script>
+      <script src="../../assets/javascripts/bundle.2ab50757.min.js"></script>
       
     
   </body>
